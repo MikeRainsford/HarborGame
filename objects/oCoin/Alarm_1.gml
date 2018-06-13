@@ -1,0 +1,1 @@
+audio_play_sound(soCoinFlip, 0, 0);

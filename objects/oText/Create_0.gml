@@ -1,0 +1,1 @@
+pointValue = noone;
