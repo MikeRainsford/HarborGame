@@ -1,3 +1,3 @@
 // Check if spell moves
-if (SpellChar("stationary", dat, ind) == "stationary")
+if (global.spellData[sp, spellC.Stationary] == "stationary")
 	instance_destroy();

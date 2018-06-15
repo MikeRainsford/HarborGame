@@ -1,9 +1,10 @@
 var coords = argument0;
-var dat = global.spellData;
-var ind = thisPlayerSpellBookIndex;
+
+var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
 // Store basic spell sound
-if (SpellChar("spellID", dat, ind) == 0)
+if (global.spellData[sp, spellC.SpellID] == 0)
 	oPuzzleBoard.basicSpellSound = ds_grid_get(global.grid, global.gridIndexX, global.gridIndexY);
 
 // Play spell selection

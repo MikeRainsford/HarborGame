@@ -1,0 +1,3 @@
+UpdateDataReference();
+UpdateCursorPosition();
+CheckSpellForms();

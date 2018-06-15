@@ -1,0 +1,2 @@
+inSpellBook = true;
+moreInfo	= false;

@@ -1,7 +1,7 @@
 /// @description Spell sound
 
 // Basic spell only
-if (SpellChar("spellName", dat, ind) == "Basic") {
+if (global.spellData[sp, spellC.SpellName] == "Basic") {
 	switch(oPuzzleBoard.basicSpellSound) {
 		case 1: //fire
 			audio_play_sound(soFireBurn, 0, 0);
@@ -19,6 +19,6 @@ if (SpellChar("spellName", dat, ind) == "Basic") {
 }
 // all other spells
 else {
-	var s = asset_get_index("so" + string(SpellChar("spellName", dat, ind)) + "Spell");
+	var s = asset_get_index("so" + string(global.spellData[sp, spellC.SpellName]) + "Spell");
 	audio_play_sound(s, 0, 0);
 }

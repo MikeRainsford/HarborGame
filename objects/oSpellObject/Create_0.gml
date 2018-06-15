@@ -1,23 +1,15 @@
 damageToDeal = 0;
 
-if (oTurnController.previousTurn == "oPlayer") {
+ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+
+if (oCombatManager.turnControllerObject.currentTurn == oCombatPlayer)
 	image_xscale = 1;
-	dat	= global.spellData;
-	ind	= global.spellBookIndex;
-}
-else if (oTurnController.previousTurn == "oEnemy") {
+else
 	image_xscale = -1;
-	//dat = global.spellData;
-	//ind = global.spellBookIndex;
-}
-else if (oTurnController.previousTurn == "oPlayer2") {
-	image_xscale = -1;
-	dat	= global.spellData;
-	ind	= global.spellBook2Index;
-}
 
 // Set Sprite
-if (SpellChar("spellID", dat, ind) == 0) {
+if (global.spellData[sp, spellC.SpellID] == 0) {
 	if (oPuzzleBoard.basicSpellSound == 1) { // basic fire
 		sprite_index = sFireBasicAnimation;
 	}
@@ -32,15 +24,15 @@ if (SpellChar("spellID", dat, ind) == 0) {
 	}
 }
 else 
-	sprite_index = asset_get_index("s" + string(SpellChar("spellName", dat, ind)) + "Animation");
+	sprite_index = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) + "Animation");
 image_index = 0;
 image_speed = 1.0;
 
 // Spell Sound
 // Check for chargesound
-if (SpellChar("hasChargeSound", dat, ind)) {
-	var s = asset_get_index("so" + string(SpellChar("spellID", dat, ind)) + "Charge");
+if (global.spellData[sp, spellC.HasChargeSound]) {
+	var s = asset_get_index("so" + string(global.spellData[sp, spellC.SpellName]) + "Charge");
 	audio_play_sound(s, 0, 0);
 }
 // Set Sound Delay to sync spell sound with animation
-alarm[0] = SpellChar("soundDelay", dat, ind);
+alarm[0] = global.spellData[sp, spellC.SoundDelay];

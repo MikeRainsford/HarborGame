@@ -1,5 +1,5 @@
 {
-    "id": "2cebdda3-ac4e-45bd-9bed-308803fc35d9",
+    "id": "c2b85079-cede-4773-a3dd-6b91724787d3",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "SpellChar",

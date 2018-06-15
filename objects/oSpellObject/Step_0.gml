@@ -1,19 +1,19 @@
 /// @description
 // Check if spell is moving across the screen
-if (SpellChar("stationary", dat, ind) == "right") 
+if (global.spellData[sp, spellC.Stationary] == "right") 
 	if (self.x < room_width / 2) // caster on left side
-		x += SpellChar("travelSpeed", dat, ind);
+		x += global.spellData[sp, spellC.TravelSpeed];
 	else // flip direction for p2 or enemy
-		x -= SpellChar("travelSpeed", dat, ind); 
-else if (SpellChar("stationary", dat, ind) == "left") 
+		x -= global.spellData[sp, spellC.TravelSpeed]; 
+else if (global.spellData[sp, spellC.Stationary] == "left") 
 	if (self.x < room_width / 2) // caster on right side
-		x -= SpellChar("travelSpeed", dat, ind);
+		x -= global.spellData[sp, spellC.TravelSpeed];
 	else // flip direction for p2 or enemy
-		x += SpellChar("travelSpeed", dat, ind);
-else if (SpellChar("stationary", dat, ind) == "up") 
-	y -= SpellChar("travelSpeed", dat, ind);
-else if (SpellChar("stationary", dat, ind) == "down") 
-	y += SpellChar("travelSpeed", dat, ind);
+		x += global.spellData[sp, spellC.TravelSpeed];
+else if (global.spellData[sp, spellC.Stationary] == "up") 
+	y -= global.spellData[sp, spellC.TravelSpeed];
+else if (global.spellData[sp, spellC.Stationary] == "down") 
+	y += global.spellData[sp, spellC.TravelSpeed];
 	
 depth = -1000;
 

@@ -1,46 +1,41 @@
 /// @description Draw the box with more information for the spells
 
-if (oTurnController.playerTurn || oTurnController.player2Turn) {
-	// Point to spell data
-	if (oTurnController.playerTurn)
-		var ind = global.spellBookIndex;
-	else if (oTurnController.player2Turn)
-		var ind = global.spellBook2Index;
-	var dat = global.spellData;
+// Data
+var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 	
-	// Toggle more info box
-	if (oPuzzleBoard.inSpellBook && action1Pressed)
-		if (oPuzzleBoard.moreInfo)
-			oPuzzleBoard.moreInfo = false;
-		else
-			oPuzzleBoard.moreInfo = true;
-	else if (!oPuzzleBoard.inSpellBook)
-		oPuzzleBoard.moreInfo = false;
-}
+// Toggle more info box
+if (oSpellBookUI.inSpellBook && action1Pressed)
+	if (oSpellBookUI.moreInfo)
+		oSpellBookUI.moreInfo = false;
+	else
+		oSpellBookUI.moreInfo = true;
+else if (!oSpellBookUI.inSpellBook)
+	oSpellBookUI.moreInfo = false;
 
 // If moreInfo boolean is active
-if (oPuzzleBoard.moreInfo) {
+if (oSpellBookUI.moreInfo) {
 	// Draw frame
 	image_speed = 0.2;
 	draw_sprite(sMoreSpellInfo, image_index, room_width / 2, 50);	
 	
 	// Draw spell image
-	var spr = asset_get_index("s" + string(dat[ind, 0]) + "Spell");
+	var spr = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) + "Spell");
 	image_speed = 0.05;
 	draw_sprite_ext(spr, -1, room_width / 2 - 30, 65, 1, 1, 0, c_white, 1);
 	
 	// Draw spell title
 	var c = c_white;
-	var title = dat[ind, 0];
+	var title = global.spellData[sp, spellC.SpellName];
 	draw_text_transformed_color(room_width / 2 - 42, 75, title, 0.20, 0.20, 0, c, c, c, c, 1.0);
 	
 	// Draw spell info
-	var desc = dat[ind, 3];	
+	var desc = global.spellData[sp, spellC.SpellInfo];	
 	draw_text_transformed_color(room_width / 2 - 42, 80, desc,  0.20, 0.20, 0, c, c, c, c, 1.0);
 	
 	// Draw more info
-	for (var i = 0; i < array_length_1d(dat[ind, 22]); i++) {
-		var info = dat[ind, 22];
+	for (var i = 0; i < array_length_1d(global.spellData[sp, spellC.MoreInfo]); i++) {
+		var info = global.spellData[sp, spellC.MoreInfo];
 		draw_text_transformed_color(room_width / 2 - 8, 60 + (i * 5), info[i], 0.20, 0.20, 0, c, c, c, c, 1.0);
 	}
 }

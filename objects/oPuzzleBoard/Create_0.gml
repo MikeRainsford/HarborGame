@@ -1,7 +1,6 @@
 // Grid Variables
 gridWidth   = 12;
 gridHeight  = 6;
-
 gridPadding = 7;
 gridXOffset = room_width / 2 - 40;
 gridYOffset = 11;
@@ -13,24 +12,32 @@ global.grid  = ds_grid_create(gridWidth, gridHeight);
 global.pGrid = ds_grid_create(gridWidth, gridHeight);
 global.gridIndexX = 0;
 global.gridIndexY = 0;
-global.spellBookIndex  = 0;
-global.spellBook2Index = 0;
 
-// Spell book variables
-moreInfo	= false;
-inSpellBook = true;
+// Set grid to all random values
+for (var i = 0; i < oPuzzleBoard.gridWidth; i++){
+	for (var j = 0; j < oPuzzleBoard.gridHeight; j++){
+		ds_grid_set(global.grid, i, j, RandomPiece());
+	}
+}
 
-// Setup grid and spell data
-SetupPuzzleGrid();
-SpellData();
+// Data reference
+sp = noone;
 
-// Create Combat Controllers
-instance_create_layer(0, 0, "GameLayer", oSpellBook);
-instance_create_layer(0, 0, "GameLayer", oCombatZone);
-instance_create_layer(0, 0, "GameLayer", oTurnController);
-instance_create_layer(0, 0, "GameLayer", oCameraController);
-instance_create_layer(0, 0, "GameLayer", oMusicController);
-instance_create_layer(0, 0, "GameLayer", oWeatherController);
+// Casting Spell Logic
+whitePieceLength	= 5;
+animationLength		= 10;
+emptyPieceLength	= 10
+chainSpaceLength	= 10;
+waveCounter			= 0;
+chainCounter		= 1;
+preChainCount		= 0;
+postChainCount		= 0;
+damageToDeal		= 0;
+basicSpellSound		= 0;
+checkPlayerStatus	= true;
+itemsToUse			= [];
 
-// Create coin
-instance_create_layer(room_width / 2, room_height / 2, "PointsLayer", oCoin);
+// Other
+basicSpellSound		= noone;
+defaultScreenShake  = 4;
+defaultScreenFlash  = 0.8;

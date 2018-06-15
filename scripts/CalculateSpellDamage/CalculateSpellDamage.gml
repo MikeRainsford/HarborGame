@@ -1,20 +1,10 @@
 /// @description Gather spell low and high damage and randomly compute a value between that range
 
-var dat = global.spellData;
-if (oTurnController.previousTurn == "oPlayer")
-	var ind = global.spellBookIndex;
-else if (oTurnController.previousTurn == "oPlayer2")
-	var ind = global.spellBook2Index;
+var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
-if (oTurnController.previousTurn == "oPlayer") {
-	var l = SpellChar("damageLow", dat, ind);
-	var h = SpellChar("damageHigh", dat, ind);
-}
-else {
-	var l = SpellChar("damageLow", dat, ind);
-	var h = SpellChar("damageHigh", dat, ind);
-}
+var l = global.spellData[sp, spellC.DamageLow];
+var h = global.spellData[sp, spellC.DamageHigh];
 
 randomize();
-var r = irandom_range(l, h);
-return r;
+return (irandom_range(l, h));

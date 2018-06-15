@@ -1,3 +1,0 @@
-DrawPuzzleFrames();
-DrawSpellBook();
-DrawMoreInfo();

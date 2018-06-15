@@ -1,5 +1,20 @@
-SetupZoneDecorations();
+decorations = [
+	sTree,
+];
 
-// Create characters
-instance_create_layer(room_width / 2 - 32, room_height - 17, "GameLayer", oCombatPlayer);
-instance_create_layer(room_width / 2 + 32, room_height - 17, "GameLayer", oCombatPlayer2);
+landSubimage	= irandom_range(0, sprite_get_number(self.sprite_index) - 1);
+randomDec		= decorations[irandom_range(0, array_length_1d(decorations) - 1)];
+
+// Right zone
+if (x > room_width / 2)
+	facing = "left";
+// Left zone
+else
+	facing = "right";
+	
+// Set scaling
+if (facing == "right")
+	image_xscale = 1;
+else if (facing == "left")
+	image_xscale = -1;
+image_yscale = 1;

@@ -3,25 +3,20 @@
 
 var d = argument0;
 
+var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+
 // Where to create the spell object
-var t = oTurnController.previousTurn;
-if (t == "oPlayer") {
-	var caster		= oCombatPlayer;
-	var ind	= global.spellBookIndex;
+if (oCombatManager.turnControllerObject.currentTurn == oCombatPlayer) {
+	var caster = oCombatPlayer;
+	var target = oCombatEnemy;
 }
-else if (t == "oPlayer2") {
-	var caster		= oCombatPlayer2;
-	var ind	= global.spellBook2Index;
+else if (oCombatManager.turnControllerObject.currentTurn == oCombatEnemy) {
+	var caster = oCombatEnemy;
+	var target = oCombatPlayer;
 }
-else {
-	var caster		= oCombatPlayer;
-	var ind	= global.spellBookIndex;
-}
-var dat = global.spellData;
 
-var target = caster.currentEnemy;
-
-switch(SpellChar("spellID", dat, ind)) { // id
+switch(global.spellData[sp, spellC.SpellID]) {
 	case 0: // basic spell
 		if (oPuzzleBoard.basicSpellSound == 1) { // basic fire
 			var i = instance_create_layer(caster.x, caster.y - 6, "GameLayer", oSpellObject);
@@ -45,25 +40,25 @@ switch(SpellChar("spellID", dat, ind)) { // id
 	case 1: // fireball
 		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 	case 2: // elemental
 		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 	case 3: // bolt
 		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 	case 4: // sprout
 		var i = instance_create_layer(caster.x, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 	case 5: // flood
 		var i = instance_create_layer(64, room_height, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 	case 6: // brushfire
 		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
-		break;
+	break;
 }

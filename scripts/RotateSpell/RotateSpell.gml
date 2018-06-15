@@ -2,34 +2,34 @@
 
 Input();
 
-var dat = global.spellData;
-var ind = thisPlayerSpellBookIndex;
+var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
 // Check turn and if in spell book
-if (thisPlayerTurn && oPuzzleBoard.inSpellBook) {
+if (oSpellBookUI.inSpellBook) {
 	// Rotate right
-	if (rotateRight && SpellChar("canRotate", dat, ind)) {		
-		switch(SpellChar("orientation", dat, ind)) {
+	if (rotateRight && global.spellData[sp, spellC.CanRotate]) {		
+		switch(global.spellData[sp, spellC.Orientation]) {
 			case 0:
-				SetSpellChar("orientation", dat, ind, 270);
+				global.spellData[sp, spellC.Orientation] = 270;
 			break;
 			case 90:
-				SetSpellChar("orientation", dat, ind, 0);
+				global.spellData[sp, spellC.Orientation] = 0;
 			break;
 			case 180:
-				SetSpellChar("orientation", dat, ind, 90);
+				global.spellData[sp, spellC.Orientation] = 90;
 			break;
 			case 270:
-				SetSpellChar("orientation", dat, ind, 180);
+				global.spellData[sp, spellC.Orientation] = 180;
 			break;
 		}
 	}
 	// Rotate left
-	if (rotateLeft && SpellChar("canRotate", dat, ind)) {
-		SetSpellChar("orientation", dat, ind, SpellChar("orientation", dat, ind) + 90);
+	if (rotateLeft && global.spellData[sp, spellC.Orientation]) {
+		global.spellData[sp, spellC.Orientation] += 90;
 		
 		// Reset 360 value to 0
-		if (SpellChar("orientation", dat, ind) mod 360 == 0)
-			SetSpellChar("orientation", dat, ind, 0);	
+		if (global.spellData[sp, spellC.Orientation] mod 360 == 0)
+			global.spellData[sp, spellC.Orientation] = 0;
 	}
 }
