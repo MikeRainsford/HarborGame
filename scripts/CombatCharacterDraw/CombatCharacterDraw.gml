@@ -20,6 +20,22 @@ else if (state == "attacking") {
 	image_xscale = facing;
 	image_yscale = 1;
 }
+else if (state == "waiting") {
+	image_speed  = 0.4;
+	image_index  = self.image_index;
+	sprite_index = idleSprite;
+	image_xscale = facing;
+	image_yscale = 1;
+	
+	// Draw attacking animation until spell object is gone
+	if (instance_exists(oSpellObject) && oSpellObject.image_xscale == self.image_xscale) {
+		image_speed  = 0.0;
+		image_index  = self.image_index;
+		sprite_index = attackSprite;
+		image_xscale = facing;
+		image_yscale = 1;
+	}
+}
 
 draw_self();
 

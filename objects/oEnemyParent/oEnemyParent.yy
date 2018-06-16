@@ -1,14 +1,23 @@
 {
-    "id": "85546a43-8560-4a4a-b83f-7bf00acc8afc",
+    "id": "0deedb62-457b-45c9-a4d7-a1257feaa941",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oOverworldPlayer",
+    "name": "oEnemyParent",
     "eventList": [
-        
+        {
+            "id": "81f45db5-80b9-431d-ad08-2175ca9c116d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "0deedb62-457b-45c9-a4d7-a1257feaa941"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "ecc816a7-80e5-4e3a-80d4-b8ab9a71cc9e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

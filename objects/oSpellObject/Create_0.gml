@@ -3,7 +3,7 @@ damageToDeal = 0;
 ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
-if (oCombatManager.turnControllerObject.currentTurn == oCombatPlayer)
+if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat)
 	image_xscale = 1;
 else
 	image_xscale = -1;

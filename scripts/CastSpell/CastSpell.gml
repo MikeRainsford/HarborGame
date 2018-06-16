@@ -1,11 +1,18 @@
 var coords = argument0;
 
+// Set player to attacking
+oCombatManager.turnControllerObject.currentTurn.state = "attacking";	
+
 var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
 // Store basic spell sound
 if (global.spellData[sp, spellC.SpellID] == 0)
 	oPuzzleBoard.basicSpellSound = ds_grid_get(global.grid, global.gridIndexX, global.gridIndexY);
+	
+// Reset cursor position
+oSpellBookUI.inSpellBook = true;
+oSpellBookUI.moreInfo = false;
 
 // Play spell selection
 audio_play_sound(soSelectSpell, 0, 0);

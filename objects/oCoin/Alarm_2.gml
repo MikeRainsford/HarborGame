@@ -1,1 +1,1 @@
-audio_play_sound(soCoinLand, 0, 0);
+//audio_play_sound(soCoinLand, 0, 0);

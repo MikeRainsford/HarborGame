@@ -1,3 +1,4 @@
+/*
 if (instance_exists(oPlayerTurn))
 	with(oPlayerTurn)
 		instance_destroy();
@@ -23,3 +24,4 @@ else if (player == 2){
 
 oTurnController.currentTime = oTurnController.turnTime;
 instance_destroy();
+*/

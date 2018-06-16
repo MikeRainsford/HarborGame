@@ -7,14 +7,8 @@ var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
 // Where to create the spell object
-if (oCombatManager.turnControllerObject.currentTurn == oCombatPlayer) {
-	var caster = oCombatPlayer;
-	var target = oCombatEnemy;
-}
-else if (oCombatManager.turnControllerObject.currentTurn == oCombatEnemy) {
-	var caster = oCombatEnemy;
-	var target = oCombatPlayer;
-}
+var caster = oCombatManager.turnControllerObject.currentTurn;
+var target = oCombatManager.turnControllerObject.nextTurn;
 
 switch(global.spellData[sp, spellC.SpellID]) {
 	case 0: // basic spell

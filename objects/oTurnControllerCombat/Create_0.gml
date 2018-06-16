@@ -1,0 +1,2 @@
+currentTurn = oPlayerCombat;
+nextTurn = oEnemyCombat;

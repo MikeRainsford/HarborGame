@@ -6,6 +6,6 @@
 var s = argument0; // screen shake size
 var t = argument1; // screen shake time/duration
 
-oCameraController.shakeSize = s;
-oCameraController.shakeScreen = true;
-oCameraController.alarm[0] = t;
+oCombatManager.cameraControllerObject.shakeSize = s;
+oCombatManager.cameraControllerObject.shakeScreen = true;
+oCombatManager.cameraControllerObject.alarm[0] = t;

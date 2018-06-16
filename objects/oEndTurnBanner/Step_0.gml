@@ -1,5 +1,5 @@
 /// @description 
-
+/*
 y = SmoothStep(y, room_height / 2, 0.9);
 
 // Move to half way point
@@ -17,3 +17,4 @@ if (y < -8) {
 	oTurnController.currentTime = oTurnController.turnTime;
 	instance_destroy();
 }
+*/

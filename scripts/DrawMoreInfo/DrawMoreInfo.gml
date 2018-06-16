@@ -6,15 +6,12 @@ var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 	
 // Toggle more info box
 if (oSpellBookUI.inSpellBook && action1Pressed)
-	if (oSpellBookUI.moreInfo)
-		oSpellBookUI.moreInfo = false;
-	else
-		oSpellBookUI.moreInfo = true;
+	oSpellBookUI.moreInfo = !oSpellBookUI.moreInfo;
 else if (!oSpellBookUI.inSpellBook)
 	oSpellBookUI.moreInfo = false;
 
 // If moreInfo boolean is active
-if (oSpellBookUI.moreInfo) {
+if (oSpellBookUI.moreInfo && oCombatManager.turnControllerObject.currentTurn.state == "idle") {
 	// Draw frame
 	image_speed = 0.2;
 	draw_sprite(sMoreSpellInfo, image_index, room_width / 2, 50);	

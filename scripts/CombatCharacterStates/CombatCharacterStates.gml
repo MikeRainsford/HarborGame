@@ -27,5 +27,8 @@ else if (state == "hurt") {
 else if (state == "attacking") {
 	// End attacking and reset to idle
 	if (!instance_exists(oSpellObject))
-		state = "idle";
+		state = "waiting";
+}
+else if (state == "waiting") {
+	
 }

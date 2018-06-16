@@ -2,7 +2,7 @@
     "id": "56b3b253-d38e-4a88-aad8-566ba5aeaf66",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oCameraController",
+    "name": "oCameraControllerCombat",
     "eventList": [
         {
             "id": "db294c06-6782-4616-a5c9-0b67058e61b7",

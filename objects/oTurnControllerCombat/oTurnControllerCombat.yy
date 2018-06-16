@@ -2,7 +2,7 @@
     "id": "ff77563d-84cc-4c73-9e66-c0bc4cf19a0d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oTurnController",
+    "name": "oTurnControllerCombat",
     "eventList": [
         {
             "id": "30a3099d-78d2-4d7c-80b4-601d1300870f",

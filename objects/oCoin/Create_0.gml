@@ -1,3 +1,4 @@
+/*
 // Pick coin
 image_xscale = 1.5;
 image_yscale = 1.5;
@@ -25,3 +26,4 @@ part_type_direction(p, 70, 110, 0, 10);
 part_type_orientation(p, 0, 0, 0, 0, 0);
 part_type_life(p, 30, 30);
 part_type_color1(p, c_white);
+*/
