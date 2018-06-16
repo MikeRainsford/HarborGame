@@ -2,10 +2,7 @@
 if (state == "idle") {
 	// Reset knockback
 	x = combatZone.x;
-	
-	// Move into using item
-	if (instance_exists(oItemObject))
-		state = "endTurn";
+	playedHurtSound = false;
 }
 else if (state == "chargingSpell") {
 	// Move into attacking state
@@ -18,16 +15,26 @@ else if (state == "hurt") {
 		alarm[0] = 20;
 	
 		// Asthetic
-		audio_play_sound(soHurt, 0, 0);
-		ShakeScreen(oPuzzleBoard.defaultScreenShake, oPuzzleBoard.defaultScreenShake);
-		ScreenFlash(oPuzzleBoard.defaultScreenFlash);
+		if (!playedHurtSound) {
+			audio_play_sound(soHurt, 0, 0);
+			ShakeScreen(oPuzzleBoard.defaultScreenShake, oPuzzleBoard.defaultScreenShake);
+			ScreenFlash(oPuzzleBoard.defaultScreenFlash);
+			playedHurtSound = true;
+		}
 		
 		// Character knockback
 		x += (4 * -image_xscale);
 	}
 }
 else if (state == "attacking") {
-	
+	// Transition out of attacking into using item
+	if (alarm[0] == -1)
+		alarm[0] = 30;
+}
+else if (state == "usingItem") {
+	// Transition out of using item into EndTurn()
+	if (alarm[0] == -1)
+		alarm[0] = 30;
 }
 else if (state == "waiting") {
 	// Set getting hurt

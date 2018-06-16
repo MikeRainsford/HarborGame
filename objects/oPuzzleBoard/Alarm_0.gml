@@ -1,5 +1,8 @@
 /// @description Animate
 
+// Element animation image_index start at 0
+image_index = 0;
+
 // Set piece to white by adding +10 to their value
 for (var i = 0; i < oPuzzleBoard.gridWidth; i++) {
 	for (var j = 0; j < oPuzzleBoard.gridHeight; j++) {

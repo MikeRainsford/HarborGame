@@ -19,6 +19,9 @@ if (global.spellData[sp, spellC.SpellName] == "Basic") {
 }
 // all other spells
 else {
+	// Play Spell Sound
 	var s = asset_get_index("so" + string(global.spellData[sp, spellC.SpellName]) + "Spell");
 	audio_play_sound(s, 0, 0);
+	// Stop charge sound
+	audio_stop_sound(asset_get_index("so" + string(global.spellData[sp, spellC.SpellName]) + "Charge"));
 }

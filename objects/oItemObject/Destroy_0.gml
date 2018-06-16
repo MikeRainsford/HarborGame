@@ -34,6 +34,3 @@ else if (type == 7) {
 								  "PointsLayer", oText);	
 	p.pointValue = 5;
 }
-
-// End Turn
-EndTurn();

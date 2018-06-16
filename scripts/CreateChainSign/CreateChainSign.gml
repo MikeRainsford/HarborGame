@@ -8,7 +8,14 @@ var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 
 // Set chain sign color
-switch(global.spellData[sp, spellC.PieceToChain]) {
+// If piece to chain and type match, then show piece to chain color
+if (global.spellData[sp, spellC.PieceToChain] == global.spellData[sp, spellC.SpellType])
+	var ptc = global.spellData[sp, spellC.PieceToChain];
+// If piece to chain and type dont match, then show spell type color
+else 
+	var ptc = global.spellData[sp, spellC.SpellType];
+
+switch(ptc) {
 	case 1:
 		var p = instance_create_layer(xx - 4 + rr, yy - 4 + rr, "PointsLayer", oChainSign);
 		p.sprite_index = sChainR;

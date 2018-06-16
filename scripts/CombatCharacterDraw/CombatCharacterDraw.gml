@@ -28,6 +28,13 @@ else if (state == "attacking") {
 	image_xscale = facing;
 	image_yscale = 1;
 }
+else if (state == "usingItem") {
+	image_speed  = 0.4;
+	image_index  = id.image_index;
+	sprite_index = idleSprite;
+	image_xscale = facing;
+	image_yscale = 1;
+}
 else if (state == "waiting") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;

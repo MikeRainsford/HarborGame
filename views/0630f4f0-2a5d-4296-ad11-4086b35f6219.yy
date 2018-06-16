@@ -23,7 +23,8 @@
         "4d73f4fd-d4c8-4d6d-b6cf-a11f269c3248",
         "0b099ab9-cc7c-4ae5-af51-f42f715d2f9b",
         "1661a38b-dd81-4643-932f-32c2e989ab85",
-        "333e912e-79e3-4391-a231-9d92ab8dde21"
+        "333e912e-79e3-4391-a231-9d92ab8dde21",
+        "3a2c4c57-7256-485a-8187-bc4730495b5b"
     ],
     "filterType": "GMSound",
     "folderName": "Board",

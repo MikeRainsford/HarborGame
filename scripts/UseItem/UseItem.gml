@@ -23,6 +23,7 @@ if (cast) {
 			it.target = oCombatManager.turnControllerObject.currentTurn;
 			it.gridX  = c[0];
 			it.gridY  = c[1];
+			it.owner  = oCombatManager.turnControllerObject.currentTurn;
 		}
 	}
 }
@@ -43,6 +44,7 @@ else {
 				it.target = oCombatManager.turnControllerObject.currentTurn;
 				it.gridX  = c[0];
 				it.gridY  = c[1];
+				it.owner  = oCombatManager.turnControllerObject.currentTurn;
 			}
 		}
 		
@@ -59,3 +61,6 @@ else {
 			alarm[8] = whitePieceLength;
 	}
 }
+
+if (oCombatManager.turnControllerObject.currentTurn.state == "idle")
+	oCombatManager.turnControllerObject.currentTurn.state = "usingItem";

@@ -2699,6 +2699,25 @@
             }
         },
         {
+            "Key": "81385705-afc6-4797-b5fc-5b3b29862168",
+            "Value": {
+                "id": "3128e0a0-86f3-4cfb-a4c6-3ee723c523bb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/soElementBreak\/soElementBreak.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "826c1dcb-6c73-4af4-bc35-51355a12c20d",
             "Value": {
                 "id": "b3496320-5621-4798-8207-516a344a88f5",
@@ -4938,6 +4957,25 @@
                 ],
                 "resourcePath": "sprites\/sCoin1\/sCoin1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ebb3e39b-f975-4ab5-8968-44b96195df23",
+            "Value": {
+                "id": "5e4dd646-e568-4b7c-9da1-89f002dc03ce",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/soElementalCharge\/soElementalCharge.yy",
+                "resourceType": "GMSound"
             }
         },
         {

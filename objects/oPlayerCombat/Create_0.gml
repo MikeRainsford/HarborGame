@@ -29,3 +29,4 @@ else if (oCombatManager.turnControllerObject.nextTurn.id == id)
 nextState = "";
 	
 combatZone = oCombatManager.playerCombatZone;
+playedHurtSound = false;
