@@ -1,14 +1,16 @@
 // Character Combat states
 if (state == "idle") {
-	// Set attacking state
-	if (instance_exists(oSpellObject) && oSpellObject.image_xscale == self.image_xscale)
+	// Reset knockback
+	x = combatZone.x;
+	
+	// Move into using item
+	if (instance_exists(oItemObject))
+		state = "endTurn";
+}
+else if (state == "chargingSpell") {
+	// Move into attacking state
+	if (instance_exists(oSpellObject))
 		state = "attacking";
-		
-	// Set getting hurt
-	if (instance_exists(oSpellObject) &&
-		place_meeting(x, y, oSpellObject) &&
-		oSpellObject.image_xscale != self.image_xscale)
-			state = "hurt";
 }
 else if (state == "hurt") {
 	if (alarm[0] == -1) {
@@ -25,10 +27,19 @@ else if (state == "hurt") {
 	}
 }
 else if (state == "attacking") {
-	// End attacking and reset to idle
-	if (!instance_exists(oSpellObject))
-		state = "waiting";
+	
 }
 else if (state == "waiting") {
+	// Set getting hurt
+	if (instance_exists(oSpellObject) && place_meeting(id.x, id.y, oSpellObject) && oSpellObject.image_xscale != id.image_xscale)
+		state = "hurt";
+		
+	// Reset knockback
+	x = combatZone.x;
+}
+else if (state == "endTurn") {
+	state = "waiting";
+}
+else if (state == "dead") {
 	
 }

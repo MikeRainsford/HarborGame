@@ -28,3 +28,8 @@ part_type_direction(h, 70, 110, 0, 10);
 part_type_orientation(h, 0, 0, 0, 0, 0);
 part_type_life(h, 30, 30);
 part_type_color1(h, c_white);
+
+// Not charging spell
+if (oCombatManager.turnControllerObject.currentTurn.state == "idle") {
+	
+}

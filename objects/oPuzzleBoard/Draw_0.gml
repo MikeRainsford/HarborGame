@@ -1,5 +1,4 @@
 DrawElements();
-DrawItems();
 DrawCursor();
 
 // Draw border

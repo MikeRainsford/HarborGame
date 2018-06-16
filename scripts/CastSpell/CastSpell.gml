@@ -1,7 +1,7 @@
 var coords = argument0;
 
 // Set player to attacking
-oCombatManager.turnControllerObject.currentTurn.state = "attacking";	
+oCombatManager.turnControllerObject.currentTurn.state = "chargingSpell";	
 
 var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];

@@ -6,16 +6,15 @@ if (type == 5) {
 	image_speed  = 0;
 	
 	// Wait until done attack
-	if (global.attacking) {
-		alarm[3] = 10;
-		//visible = false;
-	}
+	alarm[3] = 1;
+	visible  = false;
 	
 	// hide behind wave
 	if (instance_exists(oSpellObject))
 		depth = oSpellObject.depth + 1;
 	
 	if (moveToPlayer) {	
+		visible = true;
 		// Trailing particles
 		part_type_direction(p, point_direction(x, y, target.x, target.y), point_direction(x, y, target.x, target.y), 0, 10);
 		part_particles_create(trail, x + random_range(-2, 2), y + random_range(-2, 2), p, 3);
@@ -44,10 +43,8 @@ else if (type == 6) {
 	image_speed  = 0;
 	
 	// Wait until done attacking
-	if (global.attacking) {
-		alarm[1] = 10;
-		visible = false;
-	}
+	alarm[1] = 1;
+	visible  = false;
 }
 
 // Bottle

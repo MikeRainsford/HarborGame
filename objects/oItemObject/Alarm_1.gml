@@ -1,6 +1,15 @@
 /// @description Shuffle Item
-if (global.attacking)
-	alarm[1] = 1;
+
+// Check if item is in single 
+if (oCombatManager.turnControllerObject.currentTurn.state == "endTurn" ||
+	oCombatManager.turnControllerObject.currentTurn.state == "waiting") {
+		instance_destroy();
+}
+// Item is part of larger spell
 else {
-	instance_destroy();
+	if (oCombatManager.turnControllerObject.currentTurn.state != "endTurn")
+		alarm[1] = 1;
+	else {
+		instance_destroy();
+	}
 }
