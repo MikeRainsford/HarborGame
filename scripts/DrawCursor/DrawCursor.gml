@@ -18,35 +18,71 @@ else {
 }
 var cursorSprite = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) + "Cursor");
 	
-// Spell rotated 0
-if (global.spellData[sp, spellC.Orientation] == 0) {
+// Spell rotated 0 and flip 1
+if (global.spellData[sp, spellC.Orientation] == 0 &&
+	global.spellData[sp, spellC.FlipOrientation] == 1) {
 	var rot   = 0;
 	var rxoff = 0;
 	var ryoff = 0;
 }
-// Spell rotated 90
-else if (global.spellData[sp, spellC.Orientation] == 90) {
+// Spell rotated 90 and flip 1
+else if (global.spellData[sp, spellC.Orientation] == 90 &&
+		global.spellData[sp, spellC.FlipOrientation] == 1) {
 	var rot   = global.spellData[sp, spellC.Orientation];
 	var rxoff = 0;	
 	var ryoff = (cursorHeight * oPuzzleBoard.gridPadding) + 2;
 }
-// Spell rotated 180
-else if (global.spellData[sp, spellC.Orientation] == 180) {
+// Spell rotated 180 and flip 1
+else if (global.spellData[sp, spellC.Orientation] == 180 &&
+		global.spellData[sp, spellC.FlipOrientation] == 1) {
 	var rot   = global.spellData[sp, spellC.Orientation];
 	var rxoff = (cursorWidth * oPuzzleBoard.gridPadding) + 2;
 	var ryoff = (cursorHeight * oPuzzleBoard.gridPadding) + 2;
 
 }
-// Spell rotated 270
-else if (global.spellData[sp, spellC.Orientation] == 270) {
+// Spell rotated 270 and flip 1
+else if (global.spellData[sp, spellC.Orientation] == 270 &&
+		global.spellData[sp, spellC.FlipOrientation] == 1) {
 	var rot   = global.spellData[sp, spellC.Orientation];
 	var rxoff = (cursorWidth * oPuzzleBoard.gridPadding) + 2;
 	var ryoff = 0;
 }
+// Spell rotated 0 and flip -1
+else if (global.spellData[sp, spellC.Orientation] == 0 &&
+	global.spellData[sp, spellC.FlipOrientation] == -1) {
+	var rot   = 0;
+	var rxoff = (cursorWidth * oPuzzleBoard.gridPadding) + 2;
+	var ryoff = 0;
+}
+// Spell rotated 90 and flip -1
+else if (global.spellData[sp, spellC.Orientation] == 90 &&
+		global.spellData[sp, spellC.FlipOrientation] == -1) {
+	var rot   = global.spellData[sp, spellC.Orientation];
+	var rxoff = 0;	
+	var ryoff = 0;
+}
+// Spell rotated 180 and flip -1
+else if (global.spellData[sp, spellC.Orientation] == 180 &&
+		global.spellData[sp, spellC.FlipOrientation] == -1) {
+	var rot   = global.spellData[sp, spellC.Orientation];
+	var rxoff = 0;
+	var ryoff = (cursorHeight * oPuzzleBoard.gridPadding) + 2;
+
+}
+// Spell rotated 270 and flip -1
+else if (global.spellData[sp, spellC.Orientation] == 270 &&
+		global.spellData[sp, spellC.FlipOrientation] == -1) {
+	var rot   = global.spellData[sp, spellC.Orientation];
+	var rxoff = (cursorWidth * oPuzzleBoard.gridPadding) + 2;
+	var ryoff = (cursorHeight * oPuzzleBoard.gridPadding) + 2;
+}
+
+// Spell flipped
+var flp = global.spellData[sp, spellC.FlipOrientation];	
 
 // If cursor is visible, draw it with the above defined characteristics
 if (!oSpellBookUI.inSpellBook) {	
 	draw_sprite_ext(cursorSprite, 0,((global.gridIndexX + cursorWidth  - (1 * cursorWidth))  * oPuzzleBoard.gridPadding) + xo + rxoff,
 									((global.gridIndexY + cursorHeight - (1 * cursorHeight)) * oPuzzleBoard.gridPadding) + yo + ryoff,
-									1, 1, rot, c_white, 1);
+									flp, 1, rot, c_white, 1);
 }

@@ -47,7 +47,7 @@ if (!oSpellBookUI.inSpellBook){
 		}
 	}
 	// Down arrow in grid pressed
-	if (downPressed && global.gridIndexY != oPuzzleBoard.gridHeight - cursorHeight){
+	if (downPressed /*&& global.gridIndexY != oPuzzleBoard.gridHeight - cursorHeight*/){
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		if (global.gridIndexY < oPuzzleBoard.gridHeight - cursorHeight) {
 			global.gridIndexY++;	
@@ -56,13 +56,36 @@ if (!oSpellBookUI.inSpellBook){
 			global.gridIndexY = 0;	
 		}
 	}
-	// Enter spell book
+	/*
+	// Enter spell book by pressing down into it
 	else if (downPressed && global.gridIndexY == oPuzzleBoard.gridHeight - cursorHeight){
 		oSpellBookUI.inSpellBook = true;	
 	}
+	*/
+	// Enter spell book
+	if (action2Pressed) {
+		oSpellBookUI.inSpellBook = true;	
+		oSpellBookUI.moreInfo = false;
+	}
 }
+// Exit spell book by pressing A
+else {
+	if (action1Pressed) {
+		audio_play_sound(soCursorSlideFree, 0, 0);
+		oSpellBookUI.inSpellBook = false;	
+			
+		if (global.spellData[sp, spellC.Orientation] == 0 || global.spellData[sp, spellC.Orientation] == 180)
+			var cursorHeight = global.spellData[sp, spellC.CursorHeight];
+		else
+			var cursorHeight = global.spellData[sp, spellC.CursorWidth];
+			
+		global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;
+		global.gridIndexX = floor(oPuzzleBoard.gridWidth / 2) - 1;
+	}	
+}
+/*
 // In Spell Book
-// Exit spell book
+// Exit spell book by pressing up 
 else {
 	if (upPressed) {
 		audio_play_sound(soCursorSlideFree, 0, 0);
@@ -77,3 +100,4 @@ else {
 		global.gridIndexX = floor(oPuzzleBoard.gridWidth / 2);
 	}
 }
+*/

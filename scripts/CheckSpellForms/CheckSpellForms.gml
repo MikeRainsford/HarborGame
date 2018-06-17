@@ -118,39 +118,77 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 		// lightningBolt
 		case 3: 
 			// Check rotation Orientation
-			switch(global.spellData[sp, spellC.Orientation]) {
-				case 0:
-					coords = [
-						[cursorX,     cursorY + 1],
-						[cursorX + 1, cursorY + 1],
-						[cursorX + 1, cursorY    ],
-						[cursorX + 2, cursorY    ],
-					];
-				break;
-				case 90:
-					coords = [
-						[cursorX,	  cursorY	 ],
-						[cursorX,	  cursorY + 1],
-						[cursorX + 1, cursorY + 1],
-						[cursorX + 1, cursorY + 2],
-					];
-				break;
-				case 180:
-					coords = [
-						[cursorX,     cursorY + 1],
-						[cursorX + 1, cursorY + 1],
-						[cursorX + 1, cursorY    ],
-						[cursorX + 2, cursorY    ],
-					];
-				break;
-				case 270:
-					coords = [
-						[cursorX,	  cursorY	 ],
-						[cursorX,	  cursorY + 1],
-						[cursorX + 1, cursorY + 1],
-						[cursorX + 1, cursorY + 2],
-					];
-				break;
+			if (global.spellData[sp, spellC.FlipOrientation] == 1) { // not flipped
+				switch(global.spellData[sp, spellC.Orientation]) { // rotated
+					case 0: // rotated 0
+						coords = [
+							[cursorX,     cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 1, cursorY    ],
+							[cursorX + 2, cursorY    ],
+						];
+					break;
+					case 90: // rotated 90
+						coords = [
+							[cursorX,	  cursorY	 ],
+							[cursorX,	  cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 1, cursorY + 2],
+						];
+					break;
+					case 180: // rotated 180
+						coords = [
+							[cursorX,     cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 1, cursorY    ],
+							[cursorX + 2, cursorY    ],
+						];
+					break;
+					case 270: // rotate 270
+						coords = [
+							[cursorX,	  cursorY	 ],
+							[cursorX,	  cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 1, cursorY + 2],
+						];
+					break;
+				}
+			}
+			else if (global.spellData[sp, spellC.FlipOrientation] == -1) { // flipped	
+				switch(global.spellData[sp, spellC.Orientation]) { // rotated
+					case 0: // rotated 0 and flipped
+						coords = [
+							[cursorX,     cursorY],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 1, cursorY    ],
+							[cursorX + 2, cursorY + 1],
+						];
+					break;
+					case 90: // rotated 90 and flipped
+						coords = [
+							[cursorX + 1, cursorY	 ],
+							[cursorX,	  cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX,	  cursorY + 2],
+						];
+					break;
+					case 180: // rotated 180 and flipped
+						coords = [
+							[cursorX,     cursorY	 ],
+							[cursorX + 1, cursorY	 ],
+							[cursorX + 1, cursorY + 1],
+							[cursorX + 2, cursorY + 1],
+						];
+					break;
+					case 270: // rotate 270 and flipped
+						coords = [
+							[cursorX + 1, cursorY	 ],
+							[cursorX,	  cursorY + 1],
+							[cursorX + 1, cursorY + 1],
+							[cursorX,     cursorY + 2],
+						];
+					break;
+				}
 			}
 
 			// Check Spell: check for all electric
@@ -205,13 +243,22 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 		
-		// flood
+		// tsunami
 		case 5:
-			coords = [
-				[cursorX,	  cursorY],
-				[cursorX + 1, cursorY],
-				[cursorX,	  cursorY + 1]
-			];
+			if (global.spellData[sp, spellC.FlipOrientation] == 1) {
+				coords = [
+					[cursorX,	  cursorY],
+					[cursorX + 1, cursorY],
+					[cursorX,	  cursorY + 1]
+				];
+			}
+			else if (global.spellData[sp, spellC.FlipOrientation] == -1) {
+				coords = [
+					[cursorX,	  cursorY],
+					[cursorX + 1, cursorY],
+					[cursorX + 1, cursorY + 1]
+				];
+			}
 			
 			// Check Spell: check for all waters
 			var pass = true;
