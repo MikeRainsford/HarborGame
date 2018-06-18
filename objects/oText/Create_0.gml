@@ -1,1 +1,1 @@
-pointValue = noone;
+text = noone;

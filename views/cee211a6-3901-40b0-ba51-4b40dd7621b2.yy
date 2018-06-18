@@ -10,7 +10,8 @@
         "eb2bbf68-40af-493f-82d8-eb6365dcde75",
         "5ef61457-66d7-44fe-b387-92dd02ed2851",
         "c29ac5a2-af16-425f-babb-4cb69c4797c1",
-        "35db9952-182e-4319-95b2-c59a22fdb40e"
+        "35db9952-182e-4319-95b2-c59a22fdb40e",
+        "8411aecc-3b0b-4c3b-9ee5-cd6781516b01"
     ],
     "filterType": "GMSprite",
     "folderName": "SpellDeactivatedIcons",

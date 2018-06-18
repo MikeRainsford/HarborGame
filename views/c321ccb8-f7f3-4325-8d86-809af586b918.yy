@@ -10,7 +10,7 @@
         "aa57df48-18c9-433f-83f2-38724accbbf6"
     ],
     "filterType": "GMScript",
-    "folderName": "Asthetic",
+    "folderName": "Aesthetic",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

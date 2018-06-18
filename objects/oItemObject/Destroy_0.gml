@@ -7,7 +7,7 @@ if (type == 5) {
 	// Spawn score point
 	var p = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 								  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-								  "PointsLayer", oText);	
+								  "PointsLayer", oPoints);	
 	p.pointValue = 5;
 				 
 	part_particles_create(heal, target.x, target.y, h, 20);
@@ -21,7 +21,7 @@ else if (type == 6) {
 	// Spawn score point
 	var p = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 								  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-								  "PointsLayer", oText);	
+								  "PointsLayer", oPoints);	
 	p.pointValue = 5;
 }
 
@@ -31,6 +31,6 @@ else if (type == 7) {
 	// Spawn score point
 	var p = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 								  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-								  "PointsLayer", oText);	
+								  "PointsLayer", oPoints);	
 	p.pointValue = 5;
 }

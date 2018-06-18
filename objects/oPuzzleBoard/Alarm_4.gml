@@ -15,5 +15,14 @@ damageToDeal  += (preChainCount - postChainCount);
 // Trigger the next event in the chain
 alarm[5] = emptyPieceLength;
 
-// Spawn Spell
-CreateSpellObject(damageToDeal);
+// Spawn Spell if accuracy lands
+if (Chance(global.spellData[sp, spellC.Accuracy]))
+	CreateSpellObject(damageToDeal);
+// spell missed!
+else {
+	var t = instance_create_layer(oCombatManager.turnControllerObject.nextTurn.x - 5,
+								  oCombatManager.turnControllerObject.nextTurn.y - 10,
+								  "PointsLayer", oText);
+	t.text = "Missed!";
+	oCombatManager.turnControllerObject.currentTurn.state = "usingItem";
+}

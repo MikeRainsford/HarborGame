@@ -42,40 +42,42 @@ var desc = global.spellData[sp, spellC.SpellInfo];
 draw_text_transformed_color(room_width / 2 - 3, 62, desc,  0.30, 0.30, 0, c, c, c, c, 1.0);	
 
 // Draw rotate button
-if (global.spellData[sp, spellC.CanRotate]) {
-	var framex = room_width / 2 - 20;
-	var framey = 63;
-	if (oSpellBookUI.inSpellBook) {
-		if (rotateLeftHold || rotateRightHold) {
-			draw_sprite_ext(sRotate, 7, framex - 11, framey - 6, .5, .5, 0, c_white, 1);	
+if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
+	if (global.spellData[sp, spellC.CanRotate]) {
+		var framex = room_width / 2 - 20;
+		var framey = 63;
+		if (oSpellBookUI.inSpellBook) {
+			if (rotateLeftHold || rotateRightHold) {
+				draw_sprite_ext(sRotate, 7, framex - 11, framey - 6, .5, .5, 0, c_white, 1);	
+			}
+			else {	
+				image_speed = 0.2;
+				draw_sprite_ext(sRotate, image_index, framex - 11, framey - 6, .5, .5, 0, c_white, 1);
+			}
 		}
-		else {	
-			image_speed = 0.2;
-			draw_sprite_ext(sRotate, image_index, framex - 11, framey - 6, .5, .5, 0, c_white, 1);
+		else {
+			image_speed = 0;
+			draw_sprite_ext(sRotate, 7, framex - 11, framey - 6, .5, .5, 0, make_color_rgb(29, 43, 83), 1);
 		}
 	}
-	else {
-		image_speed = 0;
-		draw_sprite_ext(sRotate, 7, framex - 11, framey - 6, .5, .5, 0, make_color_rgb(29, 43, 83), 1);
-	}
-}
 
-// Draw flip button
-if (global.spellData[sp, spellC.CanFlip]) {
-	var framex = room_width / 2 - 20;
-	var framey = 63;
-	if (oSpellBookUI.inSpellBook) {
-		if (flipHold) {
-			draw_sprite_ext(sFlip, 7, framex - 14, framey, .5, .5, 0, c_white, 1);	
+	// Draw flip button
+	if (global.spellData[sp, spellC.CanFlip]) {
+		var framex = room_width / 2 - 20;
+		var framey = 63;
+		if (oSpellBookUI.inSpellBook) {
+			if (flipHold) {
+				draw_sprite_ext(sFlip, 7, framex - 14, framey, .5, .5, 0, c_white, 1);	
+			}
+			else {	
+				image_speed = 0.2;
+				draw_sprite_ext(sFlip, image_index, framex - 14, framey, .5, .5, 0, c_white, 1);
+			}
 		}
-		else {	
-			image_speed = 0.2;
-			draw_sprite_ext(sFlip, image_index, framex - 14, framey, .5, .5, 0, c_white, 1);
+		else {
+			image_speed = 0;
+			draw_sprite_ext(sFlip, 7, framex - 14, framey, .5, .5, 0, make_color_rgb(29, 43, 83), 1);
 		}
-	}
-	else {
-		image_speed = 0;
-		draw_sprite_ext(sFlip, 7, framex - 14, framey, .5, .5, 0, make_color_rgb(29, 43, 83), 1);
 	}
 }
 
@@ -83,14 +85,14 @@ if (global.spellData[sp, spellC.CanFlip]) {
 // In spell book
 if(oSpellBookUI.inSpellBook) {
 	// Press Right
-	if (right) {
+	if (right && oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
 		if (rightPressed)
 			audio_play_sound(soSpellBookTurn, 0, 0);
 		draw_sprite_ext(sLeftArrow,  0, room_width / 2 - 41, 64, 1, 1, 0, c_white, 1);
 		draw_sprite_ext(sRightArrow, 0, room_width / 2 + 39, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);
 	}
 	// Press Left
-	else if (left) {
+	else if (left && oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
 		if (leftPressed)
 			audio_play_sound(soSpellBookTurn, 0, 0);
 		draw_sprite_ext(sLeftArrow,  0, room_width / 2 - 41, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);

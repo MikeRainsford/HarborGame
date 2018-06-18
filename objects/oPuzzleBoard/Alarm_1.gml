@@ -10,7 +10,7 @@ for (var i = 0; i < ds_grid_width(global.grid); i++) {
 			// Spawn score point
 			var p = instance_create_layer((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 										  (j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oText);	
+										  "PointsLayer", oPoints);	
 			p.pointValue = 1;
 		}
 	}
@@ -41,6 +41,17 @@ else {
 	alarm[2] = emptyPieceLength;
 	
 	damageToDeal += CalculateSpellDamage();
-	// Spawn Spell
-	CreateSpellObject(damageToDeal);
+	
+	// Spawn Spell if accuracy lands
+	if (Chance(global.spellData[sp, spellC.Accuracy])) {
+		CreateSpellObject(damageToDeal);
+	}
+	// spell missed!
+	else {
+		var t = instance_create_layer(oCombatManager.turnControllerObject.nextTurn.x - 5,
+								  oCombatManager.turnControllerObject.nextTurn.y - 10,
+								  "PointsLayer", oText);
+		t.text = "Missed!";
+		oCombatManager.turnControllerObject.currentTurn.state = "usingItem";
+	}
 }	

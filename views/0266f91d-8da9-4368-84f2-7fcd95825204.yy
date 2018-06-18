@@ -10,7 +10,8 @@
         "4cd23efa-19a5-4298-92cc-069c3100c26a",
         "a9a5d6f6-d4e3-4ce4-9057-6774f0c4039f",
         "8a77c8f2-7ddf-47c9-892d-26c1e200fe9f",
-        "e870ab7d-8ccf-4ee3-8c97-b83dd9e7265e"
+        "e870ab7d-8ccf-4ee3-8c97-b83dd9e7265e",
+        "d99274fe-e62a-47ca-bdad-6ab614937427"
     ],
     "filterType": "GMSprite",
     "folderName": "SpellWhiteOutlines",

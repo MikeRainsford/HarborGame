@@ -33,7 +33,7 @@ if (dir == "right") {
 			// Spawn score point
 			var po = instance_create_layer((tx * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 										  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oText);	
+										  "PointsLayer", oPoints);	
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -70,7 +70,7 @@ else if (dir == "down") {
 			// Spawn score point
 			var po = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 										  (ty * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oText);	
+										  "PointsLayer", oPoints);	
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -107,7 +107,7 @@ else if (dir == "left") {
 			// Spawn score point
 			var po = instance_create_layer((tx * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 										  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oText);	
+										  "PointsLayer", oPoints);	
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -144,7 +144,7 @@ else if (dir == "up") {
 			// Spawn score point
 			var po = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
 										  (ty * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oText);	
+										  "PointsLayer", oPoints);	
 			po.pointValue = 1;
 				
 			// Create element burst particles

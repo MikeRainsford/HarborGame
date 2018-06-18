@@ -10,5 +10,6 @@ data = [
 	spell.Lightningbolt,
 	spell.Tsunami,
 	spell.Sprout,
-	spell.Brushfire
+	spell.Brushfire,
+	//spell.Thunderstorm,
 ];

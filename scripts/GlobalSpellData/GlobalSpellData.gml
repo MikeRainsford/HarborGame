@@ -11,6 +11,7 @@ enum spell {
 	Sprout			= 4,
 	Tsunami			= 5,
 	Brushfire		= 6,
+	Thunderstorm	= 7,
 }
 
 enum spellC {
@@ -36,6 +37,7 @@ enum spellC {
 	Orientation		= 19,
 	CanFlip			= 20,
 	FlipOrientation = 21,
+	Accuracy		= 22,
 	
 }
 
@@ -62,6 +64,7 @@ global.spellData[spell.Basic, spellC.CanRotate]					= false;
 global.spellData[spell.Basic, spellC.Orientation]				= 0;
 global.spellData[spell.Basic, spellC.CanFlip]					= false;
 global.spellData[spell.Basic, spellC.FlipOrientation]			= 1;
+global.spellData[spell.Basic, spellC.Accuracy]					= 1;
 
 // Fireball
 global.spellData[spell.Fireball, spellC.SpellID]				= 1;
@@ -86,6 +89,7 @@ global.spellData[spell.Fireball, spellC.CanRotate]				= false;
 global.spellData[spell.Fireball, spellC.Orientation]			= 0;
 global.spellData[spell.Fireball, spellC.CanFlip]				= false;
 global.spellData[spell.Fireball, spellC.FlipOrientation]		= 1;
+global.spellData[spell.Fireball, spellC.Accuracy]				= 1;
 
 // Elemental
 global.spellData[spell.Elemental, spellC.SpellID]				= 2;
@@ -110,6 +114,7 @@ global.spellData[spell.Elemental, spellC.CanRotate]				= false;
 global.spellData[spell.Elemental, spellC.Orientation]			= 0;
 global.spellData[spell.Elemental, spellC.CanFlip]				= false;
 global.spellData[spell.Elemental, spellC.FlipOrientation]		= 1;
+global.spellData[spell.Elemental, spellC.Accuracy]				= 1;
 
 // Lightningbolt
 global.spellData[spell.Lightningbolt, spellC.SpellID]			= 3;
@@ -134,6 +139,7 @@ global.spellData[spell.Lightningbolt, spellC.CanRotate]			= true;
 global.spellData[spell.Lightningbolt, spellC.Orientation]		= 0;
 global.spellData[spell.Lightningbolt, spellC.CanFlip]			= true;
 global.spellData[spell.Lightningbolt, spellC.FlipOrientation]	= 1;
+global.spellData[spell.Lightningbolt, spellC.Accuracy]			= 1;
 
 // Sprout spell
 global.spellData[spell.Sprout, spellC.SpellID]					= 4;	
@@ -158,6 +164,7 @@ global.spellData[spell.Sprout, spellC.CanRotate]				= false;
 global.spellData[spell.Sprout, spellC.Orientation]				= 0;
 global.spellData[spell.Sprout, spellC.CanFlip]					= false;
 global.spellData[spell.Sprout, spellC.FlipOrientation]			= 1;
+global.spellData[spell.Sprout, spellC.Accuracy]					= 1;
 
 // Tsunami Spell
 global.spellData[spell.Tsunami, spellC.SpellID]					= 5;
@@ -182,6 +189,7 @@ global.spellData[spell.Tsunami, spellC.CanRotate]				= false;
 global.spellData[spell.Tsunami, spellC.Orientation]				= 0;
 global.spellData[spell.Tsunami, spellC.CanFlip]					= true;
 global.spellData[spell.Tsunami, spellC.FlipOrientation]			= 1;
+global.spellData[spell.Tsunami, spellC.Accuracy]				= 1;
 
 // Brushfire Spell
 global.spellData[spell.Brushfire, spellC.SpellID]				= 6;
@@ -206,3 +214,29 @@ global.spellData[spell.Brushfire, spellC.CanRotate]				= true;
 global.spellData[spell.Brushfire, spellC.Orientation]			= 0;
 global.spellData[spell.Brushfire, spellC.CanFlip]				= false;
 global.spellData[spell.Brushfire, spellC.FlipOrientation]		= 1;
+global.spellData[spell.Brushfire, spellC.Accuracy]				= 1;
+
+// Thunderstorm Spell
+global.spellData[spell.Thunderstorm, spellC.SpellID]			= 7;
+global.spellData[spell.Thunderstorm, spellC.SpellName]			= "Thunderstorm";	
+global.spellData[spell.Thunderstorm, spellC.SpellType]			= 4;
+global.spellData[spell.Thunderstorm, spellC.SpellInfo]			= "Dmg: 6";		
+global.spellData[spell.Thunderstorm, spellC.MoreInfo]			= ["50% chance to miss."];
+global.spellData[spell.Thunderstorm, spellC.DamageLow]			= 2;						
+global.spellData[spell.Thunderstorm, spellC.DamageHigh]			= 2;							
+global.spellData[spell.Thunderstorm, spellC.PieceToChain]		= -1;
+global.spellData[spell.Thunderstorm, spellC.CursorWidth]		= 1;						
+global.spellData[spell.Thunderstorm, spellC.CursorHeight]		= 2;									
+global.spellData[spell.Thunderstorm, spellC.ScreenShakeSize]	= 6;						
+global.spellData[spell.Thunderstorm, spellC.ScreenShakeTime]	= 6;
+global.spellData[spell.Thunderstorm, spellC.ScreenFlashSize]	= 0.8;	
+global.spellData[spell.Thunderstorm, spellC.SoundDelay]			= 30;						
+global.spellData[spell.Thunderstorm, spellC.HasChargeSound]		= true;						
+global.spellData[spell.Thunderstorm, spellC.Stationary]			= "stationary";				
+global.spellData[spell.Thunderstorm, spellC.TravelSpeed]		= -1;	
+global.spellData[spell.Thunderstorm, spellC.ElementType]		= 4;
+global.spellData[spell.Thunderstorm, spellC.CanRotate]			= false;
+global.spellData[spell.Thunderstorm, spellC.Orientation]		= 0;
+global.spellData[spell.Thunderstorm, spellC.CanFlip]			= false;
+global.spellData[spell.Thunderstorm, spellC.FlipOrientation]	= 1;
+global.spellData[spell.Thunderstorm, spellC.Accuracy]			= 0.5;

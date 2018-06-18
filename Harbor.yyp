@@ -1934,7 +1934,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\/oText\/oText.yy",
+                "resourcePath": "objects\/oPoints\/oPoints.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2794,6 +2794,25 @@
             }
         },
         {
+            "Key": "8411aecc-3b0b-4c3b-9ee5-cd6781516b01",
+            "Value": {
+                "id": "c0bb84a8-b670-45f9-a358-e1eceabab5c0",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sThunderstormSpellDead\/sThunderstormSpellDead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "84ed27a5-4676-4223-99d7-a2ff744fb856",
             "Value": {
                 "id": "5f2943a9-8996-478b-9b10-8e2b7fecc68a",
@@ -3478,6 +3497,25 @@
             }
         },
         {
+            "Key": "9f000165-7f5e-4a0b-8128-182cca9f215d",
+            "Value": {
+                "id": "95546591-5643-44f8-b373-092b5f97b774",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sThunderstormSpell\/sThunderstormSpell.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9f6e1af3-aae6-4819-a940-8e3ed2d8f9f5",
             "Value": {
                 "id": "4ca7d078-c199-4599-bd10-bc27f942a9d1",
@@ -3494,6 +3532,25 @@
                 ],
                 "resourcePath": "scripts\/CastSpell\/CastSpell.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a0af6855-9c1e-4ec3-be89-b56ddb78a6a6",
+            "Value": {
+                "id": "12647a6b-5367-43b0-b136-04fc280a4db6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/oText\/oText.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3934,6 +3991,25 @@
             }
         },
         {
+            "Key": "b4dddf55-332f-4671-99e2-2d817cd6da81",
+            "Value": {
+                "id": "d15f7bfe-39ee-4a7c-8048-886c4fd3b388",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/GreedyEnemyAI\/GreedyEnemyAI.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b61a2fae-46a0-4dfd-bcb9-98727a553826",
             "Value": {
                 "id": "0d60cd33-a183-4178-ae16-f9c1e46be560",
@@ -4257,6 +4333,25 @@
             }
         },
         {
+            "Key": "c5df1d3c-09c3-4d38-b551-23aefa854e3e",
+            "Value": {
+                "id": "c4fc0a38-014b-43cd-ba2a-76eab8dd25fc",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/Chance\/Chance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c5f7bf96-a2b4-47b1-9d5a-0a5b0440edba",
             "Value": {
                 "id": "2d7521aa-691f-4481-a91e-a5cbb17649f7",
@@ -4425,6 +4520,25 @@
                 ],
                 "resourcePath": "objects\/oPuzzleBoard\/oPuzzleBoard.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d1de54e1-ae96-409e-8f7b-593111328450",
+            "Value": {
+                "id": "65bfce5f-f707-4ca3-828a-bfa1a3ed01f7",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sThunderstormCursor\/sThunderstormCursor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4637,6 +4751,25 @@
             }
         },
         {
+            "Key": "d99274fe-e62a-47ca-bdad-6ab614937427",
+            "Value": {
+                "id": "c15f42a6-d6b1-4ceb-91ac-cc3d036470e8",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sThunderstormSpellFrame\/sThunderstormSpellFrame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dad369f6-4c71-467a-a26d-eeff130186fc",
             "Value": {
                 "id": "d1051c13-d3a3-4cab-ae64-78a91d3bdb08",
@@ -4748,6 +4881,25 @@
                 ],
                 "resourcePath": "sprites\/sBasicSpellFrame\/sBasicSpellFrame.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e32b01dc-1394-4e21-851b-4bf2151e619d",
+            "Value": {
+                "id": "e1cebed9-52eb-4180-b0fb-1e6f168a52b7",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/e32b01dc-1394-4e21-851b-4bf2151e619d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5593,6 +5745,7 @@
         "9f6e1af3-aae6-4819-a940-8e3ed2d8f9f5",
         "ef8a1545-d6a9-4b80-9fb0-b798301cf533",
         "97658ff6-ca86-41f3-9e1f-fd949c7e2100",
+        "b4dddf55-332f-4671-99e2-2d817cd6da81",
         "155d4a1a-1fc4-4426-81f9-211d13411e6f",
         "feb30750-e109-4d3b-b401-1fe07898402c",
         "000c431c-4ec4-4efe-b288-74c29e083546",
@@ -5602,7 +5755,8 @@
         "79a77d28-b49b-4cc4-80e1-1a2d476aa882",
         "3f09282d-48e6-45cb-98ae-7cd3b15af24a",
         "e3a8e14b-f0b4-4803-9eb0-5b965b9de344",
-        "2d7e8372-f231-49df-83d8-fbf75fad3f0f"
+        "2d7e8372-f231-49df-83d8-fbf75fad3f0f",
+        "c5df1d3c-09c3-4d38-b551-23aefa854e3e"
     ],
     "tutorial": ""
 }

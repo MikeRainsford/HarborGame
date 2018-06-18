@@ -10,7 +10,8 @@
         "9e26d583-643b-4604-b42b-0ea78eeeb2d0",
         "dad369f6-4c71-467a-a26d-eeff130186fc",
         "6399a14e-40ca-4f1c-b7f1-285817394bec",
-        "66f8f41f-d328-41f6-bce6-5cc236384a06"
+        "66f8f41f-d328-41f6-bce6-5cc236384a06",
+        "d1de54e1-ae96-409e-8f7b-593111328450"
     ],
     "filterType": "GMSprite",
     "folderName": "Cursors",
