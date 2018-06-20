@@ -1464,6 +1464,25 @@
             }
         },
         {
+            "Key": "469c4d5d-f7bf-4531-9c8f-d0e755c63172",
+            "Value": {
+                "id": "6a5b16ea-06d2-4244-aac4-f9029ee8247a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/AICheckSpellForms\/AICheckSpellForms.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4742101a-efae-4f7b-8686-3a0f691e2b35",
             "Value": {
                 "id": "20a3421b-21a0-4233-b4eb-ca27bc6391a8",
@@ -4371,6 +4390,25 @@
             }
         },
         {
+            "Key": "c944957d-5333-4b88-acf4-cb440274c814",
+            "Value": {
+                "id": "302aa0b0-78de-402c-849a-d83406b72893",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/EnemyCastSpell\/EnemyCastSpell.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cb464aef-35e9-4901-98c9-385fc78be10d",
             "Value": {
                 "id": "1f71657d-dd36-48e6-a72f-11a9006b509b",
@@ -5745,6 +5783,8 @@
         "9f6e1af3-aae6-4819-a940-8e3ed2d8f9f5",
         "ef8a1545-d6a9-4b80-9fb0-b798301cf533",
         "97658ff6-ca86-41f3-9e1f-fd949c7e2100",
+        "469c4d5d-f7bf-4531-9c8f-d0e755c63172",
+        "c944957d-5333-4b88-acf4-cb440274c814",
         "b4dddf55-332f-4671-99e2-2d817cd6da81",
         "155d4a1a-1fc4-4426-81f9-211d13411e6f",
         "feb30750-e109-4d3b-b401-1fe07898402c",

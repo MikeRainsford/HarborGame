@@ -25,8 +25,8 @@ for (var i = 0; i < array_length_2d(coords, 0); i++) {
 }
 			
 // Start TurnParent alarm chain
-if (alarm[0] == -1)
-	alarm[0] = whitePieceLength;
+if (oPuzzleBoard.alarm[0] == -1)
+	oPuzzleBoard.alarm[0] = oPuzzleBoard.whitePieceLength;
 			
 // -----All Done In Alarm Event-----
 // Deal Damage

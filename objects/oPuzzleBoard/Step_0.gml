@@ -2,23 +2,17 @@
 if (oCombatManager.turnControllerObject.currentTurn.state == "idle") {
 	UpdateDataReference();
 	
-	// Player turn
+	// Player turn- - - - -
 	if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
-		Input();
 		// Check for matching spell configurations
-		if (action1Pressed && !oSpellBookUI.inSpellBook){
-			CheckSpellForms();
-		}
+		CheckSpellForms();
 		UpdateCursorPosition();
 	}
-	// Enemy turn
-	else if (oCombatManager.turnControllerObject.currentTurn == oEnemyCombat) {
-		// Reset everything
-		oSpellBookUI.inSpellBook = true;
-		
-		GreedyEnemyAI();
-		
-		// End turn
-		oCombatManager.turnControllerObject.currentTurn.state = "usingItem";
+	// Enemy turn- - - - -
+	else if (oCombatManager.turnControllerObject.currentTurn == oEnemyCombat) {		
+		// Decide which AI script to use
+		if (!oCombatManager.combatEnemyObject.searchedForSpell) {
+			GreedyEnemyAI();
+		}
 	}
 }

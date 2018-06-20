@@ -30,3 +30,11 @@ nextState = "";
 	
 combatZone = oCombatManager.enemyCombatZone;
 playedHurtSound = false;
+
+// AI
+searchedForSpell = false;
+spellToCast  = noone;
+spellCursorX = noone;
+spellCursorY = noone;
+spellRot	 = noone;
+spellFlip	 = noone;

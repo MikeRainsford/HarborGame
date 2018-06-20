@@ -3,7 +3,7 @@ var coords = argument1;
 var cast   = argument2;
 
 // ItemsToUse is owned by the oPlayerTurn object for its reference
-itemsToUse = items; 
+oPuzzleBoard.itemsToUse = items; 
 
 var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
@@ -57,8 +57,8 @@ else {
 				ds_grid_set(global.grid, c[0], c[1], ds_grid_get(global.grid, c[0], c[1]) + 10);
 		}	
 			
-		if (alarm[8] == -1)
-			alarm[8] = whitePieceLength;
+		if (oPuzzleBoard.alarm[8] == -1)
+			oPuzzleBoard.alarm[8] = oPuzzleBoard.whitePieceLength;
 	}
 }
 
