@@ -16,25 +16,28 @@ idleSprite		= sFrogIdle;
 hurtSprite		= sFrogHurt;
 attackSprite	= sFrogCast;
 
+// Facing
 if (x > room_width / 2)
 	facing = -1;
 else
 	facing = 1;
 
-// Other
+// State
 if (oCombatManager.turnControllerObject.currentTurn.id == id)
 	state = "idle";
 else if (oCombatManager.turnControllerObject.nextTurn.id == id)
 	state = "waiting";
 nextState = "";
-	
-combatZone = oCombatManager.enemyCombatZone;
-playedHurtSound = false;
 
 // AI
-searchedForSpell = false;
-spellToCast  = noone;
-spellCursorX = noone;
-spellCursorY = noone;
-spellRot	 = noone;
-spellFlip	 = noone;
+searchedForSpell	= false;
+spellToCast			= noone;
+spellCursorX		= noone;
+spellCursorY		= noone;
+spellRot			= 0;
+spellFlip			= 1;
+chainCount			= 0;
+
+// Other
+combatZone = oCombatManager.enemyCombatZone;
+playedHurtSound = false;

@@ -1,7 +1,9 @@
 /// @description Draw cursor on puzzle board that is used to select spells
 
-var xo = room_width / 2 - 44;	// x offset, this is adjusted to the board
-var yo = 7;						// y offset, this is adjusted to the board
+var xoConstant = room_width / 2 - 44;	// x offset, this is adjusted to the board
+var yoConstant = 7;						// y offset, this is adjusted to the board
+var xo = xoConstant + oPuzzleBoard.gridOffsetCenterX;
+var yo = yoConstant + oPuzzleBoard.gridOffsetCenterY;
 
 var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];

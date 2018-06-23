@@ -54,7 +54,6 @@ if (waveCounter > 0) {
 	if (waveCounter > 0) {
 		ShakeScreen(defaultScreenShake, defaultScreenShake);
 		PuzzlePieceSound();
-		ScreenFlash(defaultScreenFlash);
 	}
 	// Trigger the next event in the chain
 	alarm[3] = chainSpaceLength;

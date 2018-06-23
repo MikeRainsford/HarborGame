@@ -10,6 +10,11 @@ var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 var caster = oCombatManager.turnControllerObject.currentTurn;
 var target = oCombatManager.turnControllerObject.nextTurn;
 
+if (caster.x > room_width / 2)
+	var side = -1;
+else
+	var side = 1;
+
 switch(global.spellData[sp, spellC.SpellID]) {
 	case 0: // basic spell
 		if (oPuzzleBoard.basicSpellSound == 1) { // basic fire
@@ -32,15 +37,15 @@ switch(global.spellData[sp, spellC.SpellID]) {
 		
 	// ALl other non basic spells
 	case 1: // fireball
-		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
+		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
 	break;
 	case 2: // elemental
-		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
+		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
 	break;
 	case 3: // bolt
-		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
+		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
 	break;
 	case 4: // sprout
@@ -52,7 +57,7 @@ switch(global.spellData[sp, spellC.SpellID]) {
 		i.damageToDeal = d;
 	break;
 	case 6: // brushfire
-		var i = instance_create_layer(caster.x + 4, caster.y - 6, "GameLayer", oSpellObject);
+		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
 	break;
 }

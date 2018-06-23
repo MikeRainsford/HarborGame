@@ -13,7 +13,6 @@ for (var i = 0; i < oPuzzleBoard.gridWidth; i++) {
 
 // Asthetic
 ShakeScreen(global.spellData[sp, spellC.ScreenShakeSize], global.spellData[sp, spellC.ScreenShakeTime]);
-ScreenFlash(global.spellData[sp, spellC.ScreenFlashSize]);
 PuzzlePieceSound();
 
 // Trigger next event in the chain

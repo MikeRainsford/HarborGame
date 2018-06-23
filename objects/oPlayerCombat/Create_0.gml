@@ -30,3 +30,5 @@ nextState = "";
 	
 combatZone = oCombatManager.playerCombatZone;
 playedHurtSound = false;
+
+chainCount = 0;
