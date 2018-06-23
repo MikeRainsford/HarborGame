@@ -4,6 +4,8 @@
 var strongestSpell;
 var strongestSpellX;
 var strongestSpellY;
+var strongestSpellRot;
+var strongestSpellFlip;
 var maxDam = 0;
 
 // check the grid for each spell in current enemies spell book
@@ -33,9 +35,11 @@ for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.d
 						maxDam = chainDam;
 							
 						// Store spell as current strongest
-						strongestSpell  = sp;
-						strongestSpellX = j;
-						strongestSpellY = k;
+						strongestSpell		= sp;
+						strongestSpellX		= j;
+						strongestSpellY		= k;
+						strongestSpellRot	= oCombatManager.combatEnemyObject.spellRot;
+						strongestSpellFlip	= oCombatManager.combatEnemyObject.spellFlip;
 					}	
 				}
 				// Check for non-chain spells
@@ -50,9 +54,11 @@ for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.d
 						maxDam = avgDam;
 							
 						// Store spell as current strongest
-						strongestSpell  = sp;
-						strongestSpellX = j;
-						strongestSpellY = k;
+						strongestSpell		= sp;
+						strongestSpellX		= j;
+						strongestSpellY		= k;
+						strongestSpellRot	= oCombatManager.combatEnemyObject.spellRot;
+						strongestSpellFlip	= oCombatManager.combatEnemyObject.spellFlip;
 					}	
 				}
 			}
@@ -65,6 +71,8 @@ oCombatManager.combatEnemyObject.searchedForSpell = true;
 oCombatManager.combatEnemyObject.spellToCast	  = strongestSpell;
 oCombatManager.combatEnemyObject.spellCursorX	  = strongestSpellX;
 oCombatManager.combatEnemyObject.spellCursorY	  = strongestSpellY;
+oCombatManager.combatEnemyObject.spellRot		  = strongestSpellRot;
+oCombatManager.combatEnemyObject.spellFlip		  = strongestSpellFlip;
 // rotation and flipping set in AICheckSpellForms();
 
 // Navigate to spell and cast it

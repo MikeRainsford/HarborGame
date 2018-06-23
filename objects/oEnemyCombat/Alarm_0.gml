@@ -1,2 +1,4 @@
+/// @description State Transitions
+
 // Combat Character Alarm[0] Event
-script_execute(CombatCharacterAlarm0);
+CombatCharacterAlarm0();

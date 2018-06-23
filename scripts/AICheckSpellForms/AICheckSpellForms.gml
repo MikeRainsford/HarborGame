@@ -6,9 +6,10 @@ var cursorX = global.gridIndexX;
 var cursorY = global.gridIndexY;
 var cast    = false;
 var pass	= true;
+var c;
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.combatEnemyObject.spellBook.index;
+var sp  = oCombatManager.combatEnemyObject.spellBook.data[ind];
 	
 // Check Spells
 switch(global.spellData[sp, spellC.SpellID]){
@@ -21,7 +22,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 		// Check for basic or item
 		cast = true;
 		for (var i = 0; i < array_length_2d(coords, 0); i++){
-			var c = coords[0, i];
+			c = coords[0, i];
 			if (IsItem(c[0], c[1])) { // allow items
 				cast = false;
 			}
@@ -43,7 +44,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			// Check Spell: check for all fires
 			pass = true;
 			for (var i = 0; i < array_length_2d(coords, 0); i++){
-				var c = coords[0, i];
+				c = coords[0, i];
 				if (ds_grid_get(g, c[0], c[1]) != 1) {
 					if (IsItem(c[0], c[1])) // allow items
 						continue;
@@ -75,7 +76,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			var green  = false;
 			var yellow = false;
 			for (var i = 0; i < array_length_2d(coords, 0); i++){
-				var c = coords[0, i];
+				c = coords[0, i];
 				if (ds_grid_get(g, c[0], c[1]) == 1 || IsItem(c[0], c[1])) // ignore items
 					red = true;
 				if (ds_grid_get(g, c[0], c[1]) == 2 || IsItem(c[0], c[1])) // ignore items
@@ -94,7 +95,6 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 	// lightningBolt
 	case 3: 
-		var c;
 		// Make sure we dont check out of bounds
 		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
 			coords = [ // rotated 0 not flipped
@@ -341,7 +341,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			// Check Spell: check for all grass
 			pass = true;
 			for (var i = 0; i < array_length_2d(coords, 0); i++){
-				var c = coords[0, i];
+				c = coords[0, i];
 				if (ds_grid_get(g, c[0], c[1]) != 3) {
 					if (IsItem(c[0], c[1])) // allow items
 						continue; // if item, continue to check next iteration
@@ -351,14 +351,16 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 			
 			//If Valid
-			if (pass)
+			if (pass) {
+				oCombatManager.combatEnemyObject.spellRot  = 0;
+				oCombatManager.combatEnemyObject.spellFlip = 1;
 				cast = true;
+			}
 		}
 	break;
 		
 	// tsunami
 	case 5:
-		var c;
 		// Make sure we dont check out of bounds
 		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
 			// Coords: Flip = 1
@@ -382,7 +384,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 		
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = global.spellData[sp, spellC.Orientation];
+				oCombatManager.combatEnemyObject.spellRot  = 0;
 				oCombatManager.combatEnemyObject.spellFlip = 1;
 				cast = true;
 			}
@@ -412,7 +414,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = global.spellData[sp, spellC.Orientation];
+				oCombatManager.combatEnemyObject.spellRot  = 0;
 				oCombatManager.combatEnemyObject.spellFlip = -1;
 				cast = true;
 			}
@@ -421,7 +423,6 @@ switch(global.spellData[sp, spellC.SpellID]){
 		
 	// brushfire
 	case 6:
-		var c;
 		// Make sure we dont check out of bounds
 		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY < oPuzzleBoard.gridHeight) {
 			coords = [ // Coords Rotated: 0 || 180
@@ -445,7 +446,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = global.spellData[sp, spellC.Orientation];
+				oCombatManager.combatEnemyObject.spellRot  = 0;
 				oCombatManager.combatEnemyObject.spellFlip = 1;
 				cast = true;
 			}
@@ -454,7 +455,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 		// Make sure we dont check out of bounds
 		if (cursorX < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
 			coords = [ // Coords Rotated: 90 || 270
-				[cursorX,	  cursorY],
+				[cursorX, cursorY    ],
 				[cursorX, cursorY + 1],
 				[cursorX, cursorY + 2]
 			];
@@ -474,7 +475,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = global.spellData[sp, spellC.Orientation];
+				oCombatManager.combatEnemyObject.spellRot  = 90;
 				oCombatManager.combatEnemyObject.spellFlip = 1;
 				cast = true;
 			}
@@ -492,7 +493,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			// Check Spell: check for fire grass fire
 			pass = false;
-			var c = coords[0, 0];
+			c = coords[0, 0];
 			if (ds_grid_get(g, c[0], c[1]) == 4 || IsItem(c[0], c[1])) { // ignore items
 				c = coords[0, 1];
 				if (ds_grid_get(g, c[0], c[1]) == 2 || IsItem(c[0], c[1])) { // ignore items
@@ -502,7 +503,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = global.spellData[sp, spellC.Orientation];
+				oCombatManager.combatEnemyObject.spellRot  = 0;
 				oCombatManager.combatEnemyObject.spellFlip = 1;
 				cast = true;
 			}
@@ -512,8 +513,6 @@ switch(global.spellData[sp, spellC.SpellID]){
 	
 //-----------------------------------------
 if (cast) {
-	//show_debug_message(oCombatManager.combatEnemyObject.spellRot);
-	//show_debug_message(oCombatManager.combatEnemyObject.spellFlip);
 	return (global.spellData[sp, spellC.SpellID]);	
 }
 else {

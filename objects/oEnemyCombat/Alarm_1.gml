@@ -1,7 +1,7 @@
 /// @description Rot, Flip, & Exit Spell Book
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp	= oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.combatEnemyObject.spellBook.index;
+var sp	= oCombatManager.combatEnemyObject.spellBook.data[ind];
 
 // Search through spell book data for matching spell
 for (var i = 0; i < array_length_1d(spellBook.data); i++) {
@@ -13,6 +13,8 @@ for (var i = 0; i < array_length_1d(spellBook.data); i++) {
 // Check if rotation is correct first
 if (global.spellData[sp, spellC.Orientation] != spellRot) {
 	// Rotate spell
+	audio_play_sound(soRotateSpell, 0, 0);
+	
 	if (global.spellData[sp, spellC.Orientation] > spellRot)
 		global.spellData[sp, spellC.Orientation] -= 90;
 	else if (global.spellData[sp, spellC.Orientation] < spellRot)
@@ -24,8 +26,10 @@ if (global.spellData[sp, spellC.Orientation] != spellRot) {
 else {
 	// Check if flipping is correct then
 	if (global.spellData[sp, spellC.FlipOrientation] != spellFlip) {
+		
 		// Flip spell
 		global.spellData[sp, spellC.FlipOrientation] *= -1;
+		audio_play_sound(soFlipSpell, 0, 0);
 		
 		// Reset alarm and iterate again
 		alarm[1] = irandom_range(10, 20);

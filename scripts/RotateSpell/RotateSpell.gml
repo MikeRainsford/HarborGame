@@ -8,7 +8,8 @@ var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
 // Check if in spell book
 if (oSpellBookUI.inSpellBook) {
 	// Rotate right
-	if (rotateRight && global.spellData[sp, spellC.CanRotate]) {		
+	if (rotateRight && global.spellData[sp, spellC.CanRotate]) {	
+		audio_play_sound(soRotateSpell, 0, 0);
 		switch(global.spellData[sp, spellC.Orientation]) {
 			case 0:
 				global.spellData[sp, spellC.Orientation] = 270;
@@ -26,6 +27,7 @@ if (oSpellBookUI.inSpellBook) {
 	}
 	// Rotate left
 	if (rotateLeft && global.spellData[sp, spellC.CanRotate]) {
+		audio_play_sound(soRotateSpell, 0, 0);
 		// Reset 360 value to 0
 		if (global.spellData[sp, spellC.Orientation] mod 360 == 0)
 			global.spellData[sp, spellC.Orientation] = 0;

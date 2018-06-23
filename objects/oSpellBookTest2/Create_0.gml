@@ -4,7 +4,7 @@ capacity = 6;
 index	 = 0;
 
 data = [
-	//spell.Basic,
+	spell.Basic,
 	spell.Fireball,
 	spell.Elemental,
 	spell.Lightningbolt,

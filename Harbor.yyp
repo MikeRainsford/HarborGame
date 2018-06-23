@@ -191,6 +191,25 @@
             }
         },
         {
+            "Key": "06a1bffa-8ae6-474f-80e8-20a325862239",
+            "Value": {
+                "id": "eedf159e-9bc9-4d06-8041-0a825d59c4c8",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/soRotateSpell\/soRotateSpell.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "07187284-1fbf-41ce-abef-ef15c61eede1",
             "Value": {
                 "id": "b2a068b2-1492-4d51-b4c1-24fb2120e4bd",
@@ -1062,6 +1081,25 @@
                 ],
                 "resourcePath": "sprites\/sWaterEffect\/sWaterEffect.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "32875ef5-fd63-45a3-af22-3cd8052a4469",
+            "Value": {
+                "id": "bca59f02-bd6f-4f40-af1b-b3e41e52d8ee",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/soFlipSpell\/soFlipSpell.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5918,11 +5956,11 @@
         "9f6e1af3-aae6-4819-a940-8e3ed2d8f9f5",
         "ef8a1545-d6a9-4b80-9fb0-b798301cf533",
         "97658ff6-ca86-41f3-9e1f-fd949c7e2100",
+        "b4dddf55-332f-4671-99e2-2d817cd6da81",
         "469c4d5d-f7bf-4531-9c8f-d0e755c63172",
         "914b4e5f-eef4-451e-87ab-5170af03ec5b",
         "16cb4e8b-b437-4304-835f-fb9de6129e9a",
         "c944957d-5333-4b88-acf4-cb440274c814",
-        "b4dddf55-332f-4671-99e2-2d817cd6da81",
         "155d4a1a-1fc4-4426-81f9-211d13411e6f",
         "feb30750-e109-4d3b-b401-1fe07898402c",
         "000c431c-4ec4-4efe-b288-74c29e083546",

@@ -10,8 +10,8 @@ var cursorX = sxx;
 var cursorY = syy;
 var g = global.grid;
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.combatEnemyObject.spellBook.index;
+var sp  = oCombatManager.combatEnemyObject.spellBook.data[ind];
 
 switch (stc) {
 	// Single
