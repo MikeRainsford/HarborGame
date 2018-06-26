@@ -1,5 +1,8 @@
 // Character Combat states
-if (state == "idle") {
+if (state == "applyEffect") {
+	state = "idle";
+}
+else if (state == "idle") {
 	// Reset knockback
 	x = combatZone.x;
 	playedHurtSound = false;
@@ -45,6 +48,7 @@ else if (state == "waiting") {
 	x = combatZone.x;
 }
 else if (state == "endTurn") {
+	playedHurtSound = false;
 	state = "waiting";
 }
 else if (state == "dead") {

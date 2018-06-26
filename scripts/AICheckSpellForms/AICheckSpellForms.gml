@@ -79,11 +79,11 @@ switch(global.spellData[sp, spellC.SpellID]){
 				c = coords[0, i];
 				if (ds_grid_get(g, c[0], c[1]) == 1 || IsItem(c[0], c[1])) // ignore items
 					red = true;
-				if (ds_grid_get(g, c[0], c[1]) == 2 || IsItem(c[0], c[1])) // ignore items
+				else if (ds_grid_get(g, c[0], c[1]) == 2 || IsItem(c[0], c[1])) // ignore items
 					blue = true;
-				if (ds_grid_get(g, c[0], c[1]) == 3 || IsItem(c[0], c[1])) // ignore items
+				else if (ds_grid_get(g, c[0], c[1]) == 3 || IsItem(c[0], c[1])) // ignore items
 					green = true;
-				if (ds_grid_get(g, c[0], c[1]) == 4 || IsItem(c[0], c[1])) // ignore items
+				else if (ds_grid_get(g, c[0], c[1]) == 4 || IsItem(c[0], c[1])) // ignore items
 					yellow = true;
 			}
 			

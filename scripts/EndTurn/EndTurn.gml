@@ -1,6 +1,6 @@
 // Set states
 oCombatManager.turnControllerObject.currentTurn.state = "endTurn";
-oCombatManager.turnControllerObject.nextTurn.state = "idle";
+oCombatManager.turnControllerObject.nextTurn.state = "applyEffect";
 
 var t1 = oCombatManager.turnControllerObject.currentTurn;
 var t2 = oCombatManager.turnControllerObject.nextTurn;

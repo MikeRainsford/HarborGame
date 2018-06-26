@@ -6,8 +6,8 @@
     "children": [
         "0a672e0e-61a0-4a74-8d5a-f2a59575c4c1",
         "b82f818c-1cf6-44cf-8a3c-cdd34f84c04a",
-        "7a0fcf13-cfe6-4688-8c04-3c50072ebcd1",
-        "8a72996e-b260-489c-93fd-996248f3a884"
+        "8a72996e-b260-489c-93fd-996248f3a884",
+        "f6114b01-51d5-4d02-8386-c60b894cf54e"
     ],
     "filterType": "GMSprite",
     "folderName": "FXs",

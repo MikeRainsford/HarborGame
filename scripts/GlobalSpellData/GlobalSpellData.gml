@@ -15,30 +15,32 @@ enum spell {
 }
 
 enum spellC {
-	SpellName		= 0,
-	SpellID			= 1,
-	SpellType		= 2,
-	SpellInfo		= 3,
-	DamageLow		= 4,
-	DamageHigh		= 5,
-	CursorWidth		= 6,
-	CursorHeight	= 7,
-	ScreenShakeSize = 8,
-	ScreenShakeTime = 9,
-	PieceToChain    = 10,
-	SoundDelay		= 11,
-	HasChargeSound	= 12,
-	Stationary		= 13,
-	TravelSpeed		= 14,
-	ScreenFlashSize = 15,
-	ElementType		= 16,
-	MoreInfo		= 17,
-	CanRotate		= 18,
-	Orientation		= 19,
-	CanFlip			= 20,
-	FlipOrientation = 21,
-	Accuracy		= 22,
-	
+	SpellName		= 0,	// string
+	SpellID			= 1,	// int
+	SpellType		= 2,	// int
+	SpellInfo		= 3,	// string
+	DamageLow		= 4,	// int
+	DamageHigh		= 5,	// int
+	CursorWidth		= 6,	// int
+	CursorHeight	= 7,	// int
+	ScreenShakeSize = 8,	// int
+	ScreenShakeTime = 9,	// int
+	PieceToChain    = 10,	// int
+	SoundDelay		= 11,	// int
+	HasChargeSound	= 12,	// boolean
+	Stationary		= 13,	// string: "right", "left", "stationary", etc
+	TravelSpeed		= 14,	// int
+	ScreenFlashSize = 15,	// float: 0-1
+	ElementType		= 16,	// int
+	MoreInfo		= 17,	// array of strings
+	CanRotate		= 18,	// boolean
+	Orientation		= 19,	// int: 0, 90, 180, 270
+	CanFlip			= 20,	// boolean
+	FlipOrientation = 21,	// int: +1, -1
+	Accuracy		= 22,	// float: 0-1
+	HasLastingEffect= 23,	// boolean
+	EffectType		= 24,	// int
+	EffectChance	= 25,	// float: 0-1
 }
 
 // Basic Spell
@@ -65,6 +67,9 @@ global.spellData[spell.Basic, spellC.Orientation]				= 0;
 global.spellData[spell.Basic, spellC.CanFlip]					= false;
 global.spellData[spell.Basic, spellC.FlipOrientation]			= 1;
 global.spellData[spell.Basic, spellC.Accuracy]					= 1;
+global.spellData[spell.Basic, spellC.HasLastingEffect]			= false;
+global.spellData[spell.Basic, spellC.EffectType]				= noone;
+global.spellData[spell.Basic, spellC.EffectChance]				= noone;
 
 // Fireball
 global.spellData[spell.Fireball, spellC.SpellID]				= 1;
@@ -90,6 +95,9 @@ global.spellData[spell.Fireball, spellC.Orientation]			= 0;
 global.spellData[spell.Fireball, spellC.CanFlip]				= false;
 global.spellData[spell.Fireball, spellC.FlipOrientation]		= 1;
 global.spellData[spell.Fireball, spellC.Accuracy]				= 1;
+global.spellData[spell.Fireball, spellC.HasLastingEffect]		= true;
+global.spellData[spell.Fireball, spellC.EffectType]				= 1;
+global.spellData[spell.Fireball, spellC.EffectChance]			= 0.33;
 
 // Elemental
 global.spellData[spell.Elemental, spellC.SpellID]				= 2;
@@ -115,6 +123,9 @@ global.spellData[spell.Elemental, spellC.Orientation]			= 0;
 global.spellData[spell.Elemental, spellC.CanFlip]				= false;
 global.spellData[spell.Elemental, spellC.FlipOrientation]		= 1;
 global.spellData[spell.Elemental, spellC.Accuracy]				= 1;
+global.spellData[spell.Elemental, spellC.HasLastingEffect]		= false;
+global.spellData[spell.Elemental, spellC.EffectType]			= noone;
+global.spellData[spell.Elemental, spellC.EffectChance]			= noone;
 
 // Lightningbolt
 global.spellData[spell.Lightningbolt, spellC.SpellID]			= 3;
@@ -140,6 +151,9 @@ global.spellData[spell.Lightningbolt, spellC.Orientation]		= 0;
 global.spellData[spell.Lightningbolt, spellC.CanFlip]			= true;
 global.spellData[spell.Lightningbolt, spellC.FlipOrientation]	= 1;
 global.spellData[spell.Lightningbolt, spellC.Accuracy]			= 1;
+global.spellData[spell.Lightningbolt, spellC.HasLastingEffect]	= true;
+global.spellData[spell.Lightningbolt, spellC.EffectType]		= 4;
+global.spellData[spell.Lightningbolt, spellC.EffectChance]		= 1;//0.33;
 
 // Sprout spell
 global.spellData[spell.Sprout, spellC.SpellID]					= 4;	
@@ -165,6 +179,9 @@ global.spellData[spell.Sprout, spellC.Orientation]				= 0;
 global.spellData[spell.Sprout, spellC.CanFlip]					= false;
 global.spellData[spell.Sprout, spellC.FlipOrientation]			= 1;
 global.spellData[spell.Sprout, spellC.Accuracy]					= 1;
+global.spellData[spell.Sprout, spellC.HasLastingEffect]			= true;
+global.spellData[spell.Sprout, spellC.EffectType]				= 3;
+global.spellData[spell.Sprout, spellC.EffectChance]				= 1;
 
 // Tsunami Spell
 global.spellData[spell.Tsunami, spellC.SpellID]					= 5;
@@ -190,6 +207,9 @@ global.spellData[spell.Tsunami, spellC.Orientation]				= 0;
 global.spellData[spell.Tsunami, spellC.CanFlip]					= true;
 global.spellData[spell.Tsunami, spellC.FlipOrientation]			= 1;
 global.spellData[spell.Tsunami, spellC.Accuracy]				= 1;
+global.spellData[spell.Tsunami, spellC.HasLastingEffect]		= true;
+global.spellData[spell.Tsunami, spellC.EffectType]				= 2;
+global.spellData[spell.Tsunami, spellC.EffectChance]			= 1;//0.33;
 
 // Brushfire Spell
 global.spellData[spell.Brushfire, spellC.SpellID]				= 6;
@@ -215,6 +235,9 @@ global.spellData[spell.Brushfire, spellC.Orientation]			= 0;
 global.spellData[spell.Brushfire, spellC.CanFlip]				= false;
 global.spellData[spell.Brushfire, spellC.FlipOrientation]		= 1;
 global.spellData[spell.Brushfire, spellC.Accuracy]				= 1;
+global.spellData[spell.Brushfire, spellC.HasLastingEffect]		= true;
+global.spellData[spell.Brushfire, spellC.EffectType]			= 1;
+global.spellData[spell.Brushfire, spellC.EffectChance]			= 0.25;
 
 // Thunderstorm Spell
 global.spellData[spell.Thunderstorm, spellC.SpellID]			= 7;
@@ -240,3 +263,6 @@ global.spellData[spell.Thunderstorm, spellC.Orientation]		= 0;
 global.spellData[spell.Thunderstorm, spellC.CanFlip]			= false;
 global.spellData[spell.Thunderstorm, spellC.FlipOrientation]	= 1;
 global.spellData[spell.Thunderstorm, spellC.Accuracy]			= 0.5;
+global.spellData[spell.Thunderstorm, spellC.HasLastingEffect]	= true;
+global.spellData[spell.Thunderstorm, spellC.EffectType]			= 4;
+global.spellData[spell.Thunderstorm, spellC.EffectChance]		= 0.25;

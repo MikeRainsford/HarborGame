@@ -1,6 +1,6 @@
 // Player states
 if (state == "hurt") {
-	state = "waiting";
+	state = "idle";
 }
 else if (state == "attacking") {
 	if (instance_exists(oSpellObject))
