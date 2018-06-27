@@ -5,8 +5,8 @@ var yoConstant = 7;						// y offset, this is adjusted to the board
 var xo = xoConstant + oPuzzleBoard.gridOffsetCenterX;
 var yo = yoConstant + oPuzzleBoard.gridOffsetCenterY;
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
 // Define cursor width and height
 if (global.spellData[sp, spellC.Orientation] == 0 || abs(global.spellData[sp, spellC.Orientation]) == 180) {

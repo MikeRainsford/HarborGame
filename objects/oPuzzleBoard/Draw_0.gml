@@ -1,5 +1,5 @@
 DrawBorder();
 DrawElements();
 
-if (oCombatManager.turnControllerObject.currentTurn.state == "idle")
+if (oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle")
 	DrawCursor();

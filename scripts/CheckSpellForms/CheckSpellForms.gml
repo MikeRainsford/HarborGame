@@ -9,8 +9,8 @@ var cast    = false;
 var items	= [0, 0, 0, 0, 0]; // is the size of the largest spell, in this case: fireball
 var item	= false;
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Delete pieces
 cast = false;

@@ -48,10 +48,10 @@ else {
 	}
 	// spell missed!
 	else {
-		var t = instance_create_layer(oCombatManager.turnControllerObject.nextTurn.x - 5,
-								  oCombatManager.turnControllerObject.nextTurn.y - 10,
+		var t = instance_create_layer(oCombatManager.turnControllerObject.nextPlayerTurn.x - 5,
+								  oCombatManager.turnControllerObject.nextPlayerTurn.y - 10,
 								  "PointsLayer", oText);
 		t.text = "Missed!";
-		oCombatManager.turnControllerObject.currentTurn.state = "usingItem";
+		oCombatManager.turnControllerObject.currentPlayerTurn.state = "usingItem";
 	}
 }	

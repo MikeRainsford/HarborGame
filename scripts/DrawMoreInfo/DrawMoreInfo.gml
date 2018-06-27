@@ -1,8 +1,7 @@
 /// @description Draw the box with more information for the spells
 
-// Data
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
 // Toggle more info box
 if (oSpellBookUI.inSpellBook && action3Pressed)
@@ -11,7 +10,7 @@ else if (!oSpellBookUI.inSpellBook)
 	oSpellBookUI.moreInfo = false;
 
 // If moreInfo boolean is active
-if (oSpellBookUI.moreInfo && oCombatManager.turnControllerObject.currentTurn.state == "idle") {
+if (oSpellBookUI.moreInfo && oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
 	// Draw frame
 	image_speed = 0.2;
 	draw_sprite(sMoreSpellInfo, image_index, room_width / 2 - 1, 50);	

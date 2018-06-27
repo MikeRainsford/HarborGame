@@ -8,8 +8,8 @@ chainGrid = ds_grid_create(oPuzzleBoard.gridWidth, oPuzzleBoard.gridHeight);
 // Recursively path find and count pieces
 RecursiveChainCount(j, k, chainGrid);
 
-totalDamage = oCombatManager.combatEnemyObject.chainCount;
+totalDamage = oCombatManager.turnControllerObject.currentPlayerTurn.chainCount;
 
-oCombatManager.combatEnemyObject.chainCount = 0; // reset chain counter
+oCombatManager.turnControllerObject.currentPlayerTurn.chainCount = 0; // reset chain counter
 ds_grid_destroy(chainGrid);
 return totalDamage;

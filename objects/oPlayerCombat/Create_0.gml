@@ -22,14 +22,13 @@ else
 	facing = 1;
 
 // Other
-if (oCombatManager.turnControllerObject.currentTurn.id == id)
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id)
 	state = "idle";
-else if (oCombatManager.turnControllerObject.nextTurn.id == id)
+else
 	state = "waiting";
-nextState = "";
 	
 combatZone = oCombatManager.playerCombatZone;
 playedHurtSound = false;
 effectApplied   = false;
-
 chainCount = 0;
+attackTarget = oEnemyCombat;

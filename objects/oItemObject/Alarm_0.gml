@@ -1,7 +1,7 @@
 /// @description Bottle Rocket Item
 
 // Wait for attacking to finish
-if (oCombatManager.turnControllerObject.currentTurn.state != "usingItem") {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.state != "usingItem") {
 	alarm[0] = 1;	
 }
 // Attacking is done

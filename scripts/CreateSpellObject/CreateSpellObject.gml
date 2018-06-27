@@ -3,12 +3,12 @@
 
 var d = argument0;
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Where to create the spell object
-var caster = oCombatManager.turnControllerObject.currentTurn;
-var target = oCombatManager.turnControllerObject.nextTurn;
+var caster = oCombatManager.turnControllerObject.currentPlayerTurn.id;
+var target = oCombatManager.turnControllerObject.currentPlayerTurn.attackTarget;
 
 if (caster.x > room_width / 2)
 	var side = -1;

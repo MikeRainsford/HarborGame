@@ -84,7 +84,7 @@ else if (dir == "down") {
 }
 else if (dir == "left") {
 	if (x > -10)
-		x-= bottleSpeed;
+		x -= bottleSpeed;
 	y += irandom_range(-1, 1); // shake
 	
 	// Clear grid as moving past each spot

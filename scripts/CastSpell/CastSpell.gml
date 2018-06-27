@@ -1,10 +1,10 @@
 var coords = argument0;
 
 // Set player to attacking
-oCombatManager.turnControllerObject.currentTurn.state = "chargingSpell";	
+oCombatManager.turnControllerObject.currentPlayerTurn.id.state = "chargingSpell";	
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Store basic spell sound
 if (global.spellData[sp, spellC.SpellID] == 0)

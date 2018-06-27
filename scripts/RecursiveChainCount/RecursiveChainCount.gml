@@ -8,8 +8,8 @@ var xx	= argument0; // x position of current index
 var yy	= argument1; // y position of current index
 var cg  = argument2;
 var g	= global.grid;
-var ind = oCombatManager.combatEnemyObject.spellBook.index;
-var sp	= oCombatManager.combatEnemyObject.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // If piece to chain and spell type are the same
 var st  = global.spellData[sp, spellC.SpellType];
@@ -21,7 +21,7 @@ else
 // check if current spot is our chain piece
 if (ds_grid_get(g, xx, yy) == ptc || ds_grid_get(g, xx, yy) == st || IsItem(xx, yy)) {
 	ds_grid_set(cg, xx, yy, ptc);
-	oCombatManager.combatEnemyObject.chainCount++;
+	oCombatManager.turnControllerObject.currentPlayerTurn.chainCount++;
 	
 	// Good to keep going
 	// Check left

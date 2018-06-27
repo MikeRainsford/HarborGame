@@ -23,11 +23,10 @@ else
 	facing = 1;
 
 // State
-if (oCombatManager.turnControllerObject.currentTurn.id == id)
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id)
 	state = "idle";
-else if (oCombatManager.turnControllerObject.nextTurn.id == id)
+else
 	state = "waiting";
-nextState = "";
 
 // AI
 searchedForSpell	= false;
@@ -41,3 +40,4 @@ chainCount			= 0;
 // Other
 combatZone = oCombatManager.enemyCombatZone;
 playedHurtSound = false;
+attackTarget = oPlayerCombat;

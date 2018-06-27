@@ -8,8 +8,8 @@ var cast    = false;
 var pass	= true;
 var c;
 
-var ind = oCombatManager.combatEnemyObject.spellBook.index;
-var sp  = oCombatManager.combatEnemyObject.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
 // Check Spells
 switch(global.spellData[sp, spellC.SpellID]){
@@ -118,8 +118,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -147,8 +147,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 90;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 90;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -176,8 +176,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 180;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 180;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -205,8 +205,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 270;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 270;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -234,8 +234,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = -1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = -1;
 				cast = true;
 			}
 		}
@@ -263,8 +263,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 90;
-				oCombatManager.combatEnemyObject.spellFlip = -1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 90;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = -1;
 				cast = true;
 			}
 		}
@@ -292,8 +292,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 180;
-				oCombatManager.combatEnemyObject.spellFlip = -1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 180;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = -1;
 				cast = true;
 			}
 		}
@@ -321,8 +321,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 270;
-				oCombatManager.combatEnemyObject.spellFlip = -1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 270;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = -1;
 				cast = true;
 			}
 		}
@@ -352,8 +352,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -384,8 +384,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -414,8 +414,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = -1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = -1;
 				cast = true;
 			}
 		}
@@ -446,8 +446,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -475,8 +475,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 90;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 90;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}
@@ -503,8 +503,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			
 			//If Valid
 			if (pass) {
-				oCombatManager.combatEnemyObject.spellRot  = 0;
-				oCombatManager.combatEnemyObject.spellFlip = 1;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellRot  = 0;
+				oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip = 1;
 				cast = true;
 			}
 		}

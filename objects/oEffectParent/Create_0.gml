@@ -1,6 +1,6 @@
 turns				= noone;
 effectThisPerTurn	= noone;
-effectThemPerTurn	 = noone;
+effectThemPerTurn	= noone;
 owner				= noone;
 
 effectApplied		= false;

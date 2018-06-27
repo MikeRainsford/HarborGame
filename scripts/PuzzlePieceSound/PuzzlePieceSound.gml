@@ -2,8 +2,8 @@
 
 // Basic spell sound is calculated in CheckSpellForm script
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // If "piece to chain" == -1, get the sound for the piece that it is
 if (global.spellData[sp, spellC.PieceToChain] == -1) {

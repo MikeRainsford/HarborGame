@@ -11,10 +11,10 @@ var maxDam = 0;
 // check the grid for each spell in current enemies spell book
 for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.data); i++) {
 	// Update spell book index
-	oCombatManager.combatEnemyObject.spellBook.index = i;
+	oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index = i;
 	
-	var ind = oCombatManager.combatEnemyObject.spellBook.index;
-	var sp  = oCombatManager.combatEnemyObject.spellBook.data[ind];
+	var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+	var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
 	// Search through grid for current spell
 	for (var j = 0; j < oPuzzleBoard.gridWidth; j++) {
@@ -38,8 +38,8 @@ for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.d
 						strongestSpell		= sp;
 						strongestSpellX		= j;
 						strongestSpellY		= k;
-						strongestSpellRot	= oCombatManager.combatEnemyObject.spellRot;
-						strongestSpellFlip	= oCombatManager.combatEnemyObject.spellFlip;
+						strongestSpellRot	= oCombatManager.turnControllerObject.currentPlayerTurn.spellRot;
+						strongestSpellFlip	= oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip;
 					}	
 				}
 				// Check for non-chain spells
@@ -57,8 +57,8 @@ for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.d
 						strongestSpell		= sp;
 						strongestSpellX		= j;
 						strongestSpellY		= k;
-						strongestSpellRot	= oCombatManager.combatEnemyObject.spellRot;
-						strongestSpellFlip	= oCombatManager.combatEnemyObject.spellFlip;
+						strongestSpellRot	= oCombatManager.turnControllerObject.currentPlayerTurn.spellRot;
+						strongestSpellFlip	= oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip;
 					}	
 				}
 			}
@@ -67,15 +67,15 @@ for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.d
 }
 
 // Set variables
-oCombatManager.combatEnemyObject.searchedForSpell = true;
-oCombatManager.combatEnemyObject.spellToCast	  = strongestSpell;
-oCombatManager.combatEnemyObject.spellCursorX	  = strongestSpellX;
-oCombatManager.combatEnemyObject.spellCursorY	  = strongestSpellY;
-oCombatManager.combatEnemyObject.spellRot		  = strongestSpellRot;
-oCombatManager.combatEnemyObject.spellFlip		  = strongestSpellFlip;
+oCombatManager.turnControllerObject.currentPlayerTurn.searchedForSpell = true;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellToCast	  = strongestSpell;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellCursorX	  = strongestSpellX;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellCursorY	  = strongestSpellY;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellRot		  = strongestSpellRot;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip		  = strongestSpellFlip;
 // rotation and flipping set in AICheckSpellForms();
 
 // Navigate to spell and cast it
-if (oCombatManager.combatEnemyObject.alarm[1] == -1)
-	oCombatManager.combatEnemyObject.alarm[1] = 10;
-oCombatManager.combatEnemyObject.spellBook.index = 0;
+if (oCombatManager.turnControllerObject.currentPlayerTurn.alarm[1] == -1)
+	oCombatManager.turnControllerObject.currentPlayerTurn.alarm[1] = 10;
+oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index = 0;

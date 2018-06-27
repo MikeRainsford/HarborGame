@@ -1,8 +1,8 @@
 /// @description Draw all the elements that make up the spell book that are dynamic and changing
 Input();		
 		
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Draw Spell Image
 // Get rotation
@@ -42,7 +42,7 @@ var desc = global.spellData[sp, spellC.SpellInfo];
 draw_text_transformed_color(room_width / 2 - 3, 62, desc,  0.30, 0.30, 0, c, c, c, c, 1.0);	
 
 // Draw rotate button
-if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
+if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 	if (global.spellData[sp, spellC.CanRotate]) {
 		var framex = room_width / 2 - 20;
 		var framey = 63;
@@ -85,14 +85,14 @@ if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
 // In spell book
 if(oSpellBookUI.inSpellBook) {
 	// Press Right
-	if (right && oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
+	if (right && oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 		if (rightPressed)
 			audio_play_sound(soSpellBookTurn, 0, 0);
 		draw_sprite_ext(sLeftArrow,  0, room_width / 2 - 41, 64, 1, 1, 0, c_white, 1);
 		draw_sprite_ext(sRightArrow, 0, room_width / 2 + 39, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);
 	}
 	// Press Left
-	else if (left && oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
+	else if (left && oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 		if (leftPressed)
 			audio_play_sound(soSpellBookTurn, 0, 0);
 		draw_sprite_ext(sLeftArrow,  0, room_width / 2 - 41, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);

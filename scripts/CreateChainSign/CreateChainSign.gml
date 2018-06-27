@@ -4,8 +4,8 @@ var xx = argument0;				// x position where to create chain sign
 var yy = argument1;				// y position where to create chain sign
 var rr = random_range(-2, 2);	// x & y random offset for variability
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Set chain sign color
 // If piece to chain and type match, then show piece to chain color

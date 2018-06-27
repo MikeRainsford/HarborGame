@@ -1,8 +1,8 @@
 {
-    "id": "67ab2554-39a4-4adc-9302-cba6bd8c78ca",
+    "id": "c2178114-892b-4bf3-a1b2-5968d0d58beb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "AdjustBoardSize",
+    "name": "NextTurn",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,7 +1,7 @@
 /// @description Rot, Flip, & Exit Spell Book
 
-var ind = oCombatManager.combatEnemyObject.spellBook.index;
-var sp	= oCombatManager.combatEnemyObject.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // Search through spell book data for matching spell
 for (var i = 0; i < array_length_1d(spellBook.data); i++) {

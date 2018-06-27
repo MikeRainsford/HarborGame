@@ -5,8 +5,8 @@ var cast   = argument2;
 // ItemsToUse is owned by the oPlayerTurn object for its reference
 oPuzzleBoard.itemsToUse = items; 
 
-var ind = oCombatManager.turnControllerObject.currentTurn.spellBook.index;
-var sp  = oCombatManager.turnControllerObject.currentTurn.spellBook.data[ind];
+var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
+var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 // If the spell consumes the item
 if (cast) {
@@ -20,10 +20,10 @@ if (cast) {
 											"PointsLayer",
 											oItemObject);
 			it.type   = ds_grid_get(global.grid, c[0], c[1]) mod 10;
-			it.target = oCombatManager.turnControllerObject.currentTurn;
+			it.target = oCombatManager.turnControllerObject.currentPlayerTurn;
+			it.owner  = oCombatManager.turnControllerObject.currentPlayerTurn;
 			it.gridX  = c[0];
-			it.gridY  = c[1];
-			it.owner  = oCombatManager.turnControllerObject.currentTurn;
+			it.gridY  = c[1];;
 		}
 	}
 }
@@ -41,10 +41,10 @@ else {
 												"PointsLayer",
 												oItemObject);
 				it.type   = ds_grid_get(global.grid, c[0], c[1]) mod 10;
-				it.target = oCombatManager.turnControllerObject.currentTurn;
+				it.target = oCombatManager.turnControllerObject.currentPlayerTurn;
+				it.owner  = oCombatManager.turnControllerObject.currentPlayerTurn;
 				it.gridX  = c[0];
 				it.gridY  = c[1];
-				it.owner  = oCombatManager.turnControllerObject.currentTurn;
 			}
 		}
 		
@@ -62,5 +62,5 @@ else {
 	}
 }
 
-if (oCombatManager.turnControllerObject.currentTurn.state == "idle")
-	oCombatManager.turnControllerObject.currentTurn.state = "usingItem";
+if (oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle")
+	oCombatManager.turnControllerObject.currentPlayerTurn.state = "usingItem";

@@ -1,7 +1,7 @@
 // If player turn, player must be in idle state
-if (oCombatManager.turnControllerObject.currentTurn.state == "idle") {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
 	// Player turn
-	if (oCombatManager.turnControllerObject.currentTurn == oPlayerCombat) {
+	if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 		DrawSpellBook();
 		DrawMoreInfo();
 	}
