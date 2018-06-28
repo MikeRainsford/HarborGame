@@ -3,74 +3,52 @@
 
 var g = global.grid;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Create shapes
 for (var i = 0; i < ds_grid_width(g); i++){
 	for (var j = 0; j < ds_grid_height(g); j++){
 		switch(ds_grid_get(g, i, j)){
-			// Fire----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Fire
 			case 1: 
-				draw_sprite_ext(sFire,  0,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sFire,  0, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 11: 
-				draw_sprite_ext(sFire,  1,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sFire,  1, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 21: 
 				image_speed = 0.5;
-				draw_sprite_ext(sFireBurst, image_index,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sFireBurst, image_index, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			
-			// Water----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Water
 			case 2:
-				draw_sprite_ext(sWater,  0,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sWater,  0, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 12:
-				draw_sprite_ext(sWater,  1,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sWater,  1, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 22:
 				image_speed = 0.5;
-				draw_sprite_ext(sWaterSplit, image_index,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sWaterSplit, image_index, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			
-			// Leaf-----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Leaf
 			case 3:
-				draw_sprite_ext(sLeaf,  0,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sLeaf,  0, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 13:
-				draw_sprite_ext(sLeaf,  1,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sLeaf,  1, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			case 23:
 				image_speed = 0.5;
-				draw_sprite_ext(sVineEat, image_index,
-					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-					1, 1, 0, c_white, 1);
+				draw_sprite_ext(sVineEat, image_index, GridToWorld(i, "x"), GridToWorld(j, "y"), 1, 1, 0, c_white, 1);
 			break;
 			
-			// Bolt----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Bolt
 			case 4:
 				draw_sprite_ext(sBolt,  0,
 					(i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
@@ -94,7 +72,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
 					1, 1, 0, c_white, 1);
 			break;
-			// Potion----------
+			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Potion
 			case 5:
 				image_speed = 0.4;
 				draw_sprite_ext(sPotionItem,  image_index,
@@ -110,7 +90,8 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					1, 1, 0, c_white, 1);
 			break;
 			
-			// Shuffle----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Shuffle
 			case 6:
 				image_speed = 0.4;
 				draw_sprite_ext(sShuffleItem,  image_index,
@@ -125,7 +106,8 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					1, 1, 0, c_white, 1);
 			break;
 			
-			// Bottle----------
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Bottle
 			case 7:
 				image_speed = 0.4;
 				draw_sprite_ext(sBottleItem,  image_index,

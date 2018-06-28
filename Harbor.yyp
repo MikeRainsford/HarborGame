@@ -4290,7 +4290,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/PreviousTurn\/PreviousTurn.yy",
+                "resourcePath": "scripts\/PreviousPlayer\/PreviousPlayer.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4423,7 +4423,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/NextTurn\/NextTurn.yy",
+                "resourcePath": "scripts\/NextPlayer\/NextPlayer.yy",
                 "resourceType": "GMScript"
             }
         },

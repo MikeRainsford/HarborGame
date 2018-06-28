@@ -1,4 +1,4 @@
-/// @description
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check if spell is moving across the screen
 if (global.spellData[sp, spellC.Stationary] == "right") 
 	if (self.x < room_width / 2) // caster on left side
@@ -17,6 +17,7 @@ else if (global.spellData[sp, spellC.Stationary] == "down")
 	
 depth = -1000;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Delete once out of room
 if (x > room_width || x < -64 || y < - 64 || y > room_height)
 	instance_destroy();

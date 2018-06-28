@@ -1,5 +1,6 @@
 /// @description Remove Item When Not Casting A Spell
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set piece to white by adding +10 to their value
 for (var i = 0; i < ds_grid_width(global.grid); i++) {
 	for (var j = 0; j < ds_grid_height(global.grid); j++) {
@@ -8,10 +9,12 @@ for (var i = 0; i < ds_grid_width(global.grid); i++) {
 	}
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Asthetic
 ShakeScreen(global.spellData[sp, spellC.ScreenShakeSize], global.spellData[sp, spellC.ScreenShakeTime]);
 ScreenFlash(global.spellData[sp, spellC.ScreenFlashSize]);
 PuzzlePieceSound();
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Trigger the next event in the chain
 alarm[9] = animationLength;

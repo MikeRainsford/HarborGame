@@ -6,10 +6,11 @@ var t = instance_create_layer(oCombatManager.turnControllerObject.currentPlayerT
 							  "PointsLayer", oPoints);
 t.pointValue = oPuzzleBoard.damageToDeal * -1;	
 
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Transition out of attack state to use item state
 oCombatManager.turnControllerObject.currentPlayerTurn.state = "usingItem";
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Reset damage
 oPuzzleBoard.damageToDeal = 0;
 

@@ -5,8 +5,9 @@ Input();
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-// Check if in spell book
 if (oSpellBookUI.inSpellBook) {
+	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Rotate right
 	if (rotateRight && global.spellData[sp, spellC.CanRotate]) {	
 		audio_play_sound(soRotateSpell, 0, 0);
@@ -25,6 +26,8 @@ if (oSpellBookUI.inSpellBook) {
 			break;
 		}
 	}
+	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Rotate left
 	if (rotateLeft && global.spellData[sp, spellC.CanRotate]) {
 		audio_play_sound(soRotateSpell, 0, 0);

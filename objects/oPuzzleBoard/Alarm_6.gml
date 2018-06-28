@@ -1,4 +1,6 @@
 /// @description Chain Delete Old Links
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Delete old links in the chain
 for (var i = 0; i < oPuzzleBoard.gridWidth; i++) {
 	for (var j = 0; j < oPuzzleBoard.gridHeight; j++) {

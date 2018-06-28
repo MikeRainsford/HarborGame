@@ -1,5 +1,6 @@
 /// @description Chain
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Element animation image_index start at 0
 image_index = 0;
 

@@ -14,5 +14,6 @@ for (var i = 0; i < ds_grid_width(global.grid); i++) {
 	}
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Trigger the next event in the chain
 alarm[10] = emptyPieceLength;	

@@ -1,4 +1,6 @@
 /// @description Item On Board
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Potion
 if (type == 5) {
 	sprite_index = sPotionItem;
@@ -36,6 +38,7 @@ if (type == 5) {
 	}
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Shuffle
 else if (type == 6) {
 	sprite_index = sShuffleItem;
@@ -47,6 +50,7 @@ else if (type == 6) {
 	visible  = false;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Bottle
 else if (type == 7) {
 	sprite_index = sBottleItemSpin;

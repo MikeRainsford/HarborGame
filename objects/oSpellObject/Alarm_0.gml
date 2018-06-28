@@ -1,5 +1,6 @@
 /// @description Spell sound
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Basic spell only
 if (global.spellData[sp, spellC.SpellName] == "Basic") {
 	switch(oPuzzleBoard.basicSpellSound) {
@@ -17,6 +18,8 @@ if (global.spellData[sp, spellC.SpellName] == "Basic") {
 			break;
 	}
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // all other spells
 else {
 	// Play Spell Sound

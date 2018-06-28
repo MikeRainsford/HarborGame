@@ -1,8 +1,8 @@
 {
-    "id": "ba6da1ca-9ec3-45a5-9ff1-346a480b4e14",
+    "id": "c2178114-892b-4bf3-a1b2-5968d0d58beb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "PreviousTurn",
+    "name": "NextPlayer",
     "IsCompatibility": false,
     "IsDnD": false
 }

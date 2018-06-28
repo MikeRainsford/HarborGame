@@ -1,5 +1,6 @@
 /// @description Delete
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Delete main body pieces
 for (var i = 0; i < ds_grid_width(global.grid); i++) {
 	for (var j = 0; j < ds_grid_height(global.grid); j++) {
@@ -16,6 +17,7 @@ for (var i = 0; i < ds_grid_width(global.grid); i++) {
 	}
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // If chaining
 if (global.spellData[sp, spellC.PieceToChain] != -1) {
 	// Create priority grid
@@ -37,6 +39,7 @@ if (global.spellData[sp, spellC.PieceToChain] != -1) {
 
 }
 else {
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Trigger next event in the chain
 	alarm[2] = emptyPieceLength;
 	

@@ -11,13 +11,12 @@ var item	= false;
 
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
-
-// Delete pieces
-cast = false;
 	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check Spells
 if (action1Pressed && !oSpellBookUI.inSpellBook){
 	switch(global.spellData[sp, spellC.SpellID]){
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// Single
 		case 0: 
 			coords = [
@@ -40,6 +39,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 			}
 		break;
 			
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// Fireball
 		case 1: 
 			coords = [
@@ -72,6 +72,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 			
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// elemental
 		case 2: 
 			coords = [
@@ -115,6 +116,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 			
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// lightningBolt
 		case 3: 
 			// Check rotation Orientation
@@ -213,6 +215,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 			
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// sprout
 		case 4:
 			coords = [
@@ -243,6 +246,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 		
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// tsunami
 		case 5:
 			if (global.spellData[sp, spellC.FlipOrientation] == 1) {
@@ -282,6 +286,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 		
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// brushfire
 		case 6:
 			// check rotation orientation
@@ -355,6 +360,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				cast = true;
 		break;
 		
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// thunderstorm
 		case 7:
 			coords = [
@@ -386,6 +392,7 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 				}
 			}
 			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			//If Valid
 			if (pass)
 				cast = true;
@@ -393,11 +400,12 @@ if (action1Pressed && !oSpellBookUI.inSpellBook){
 	}
 }
 	
-//-----------------------------------------
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Cast Spell
 if (cast)
 	CastSpell(coords);
 	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Use item
 if (item)
 	UseItem(items, coords, cast); // pass items array, coordinates array, and check if we cast a spell
