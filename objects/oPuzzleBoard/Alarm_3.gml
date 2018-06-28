@@ -15,14 +15,16 @@ if (waveCounter > 0) {
 			
 					// Create Chain Sign
 					if (!instance_exists(oChainSign)) {
-						CreateChainSign((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + 8 + random_range(-5, 5),
-										(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + 8 + random_range(-5, 5));
+						CreateChainSign(
+							GridToWorld(i, "x") + random_range(-5, 5),
+							GridToWorld(j, "y") + random_range(-5, 5));
 						audio_play_sound(soChain, 0, 0);
 							
 						// Spawn score point
-						var p = instance_create_layer((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-														(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-														"PointsLayer", oPoints);	
+						var p = instance_create_layer(
+							GridToWorld(i, "x") + random_range(-5, 5),
+							GridToWorld(j, "y") + random_range(-5, 5),
+							"PointsLayer", oPoints);	
 						p.pointValue = 1;
 					}
 				}
@@ -34,14 +36,16 @@ if (waveCounter > 0) {
 				
 					// Create Chain Sign
 					if (!instance_exists(oChainSign)) {
-						CreateChainSign((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + 8 + random_range(-5, 5),
-										(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + 8 + random_range(-5, 5));
+						CreateChainSign(
+							GridToWorld(i, "x") + random_range(-5, 5),
+							GridToWorld(j, "y") + random_range(-5, 5));
 						audio_play_sound(soChain, 0, 0);
 							
 						// Spawn score point
-						var p = instance_create_layer((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-														(j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-														"PointsLayer", oPoints);	
+						var p = instance_create_layer(
+							GridToWorld(i, "x") + random_range(-5, 5),
+							GridToWorld(j, "y") + random_range(-5, 5),
+							"PointsLayer", oPoints);	
 						p.pointValue = 1;
 					}
 				}

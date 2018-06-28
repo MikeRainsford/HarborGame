@@ -10,5 +10,4 @@ for (var i = 0; i < oPuzzleBoard.gridWidth; i++) {
 		}
 	}
 }
-
 return count;

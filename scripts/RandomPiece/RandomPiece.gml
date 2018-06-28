@@ -16,4 +16,3 @@ if (r >= 970) { // got item
 else { // no item
 	return r2;
 }
-

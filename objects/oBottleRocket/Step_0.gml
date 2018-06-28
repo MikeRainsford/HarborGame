@@ -1,7 +1,7 @@
 /// @description Move offscreen
 var bottleSpeed = 2;
-var tx = (x - oPuzzleBoard.gridXOffset) / oPuzzleBoard.gridPadding;
-var ty = (y - oPuzzleBoard.gridYOffset) / oPuzzleBoard.gridPadding;
+var tx = WorldToGrid(x, "x", "");
+var ty = WorldToGrid(y, "y", "");
 
 var cRed    = make_color_rgb(255, 0, 52);
 var cBlue   = make_color_rgb(0, 170, 255);
@@ -33,9 +33,10 @@ if (dir == "right") {
 			audio_play_sound(soElementBreak, 0, 0);
 			
 			// Spawn score point
-			var po = instance_create_layer((tx * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-										  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oPoints);	
+			var po = instance_create_layer(
+				GridToWorld(tx, "x")	+ random_range(-5, 5),
+				GridToWorld(gridY, "y") + random_range(-5, 5),
+				"PointsLayer", oPoints);	
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -73,9 +74,10 @@ else if (dir == "down") {
 			audio_play_sound(soElementBreak, 0, 0);
 			
 			// Spawn score point
-			var po = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-										  (ty * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oPoints);	
+			var po = instance_create_layer(
+				GridToWorld(gridX, "x")	+ random_range(-5, 5),
+				GridToWorld(ty, "y") + random_range(-5, 5),
+				"PointsLayer", oPoints);
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -113,9 +115,10 @@ else if (dir == "left") {
 			audio_play_sound(soElementBreak, 0, 0);
 			
 			// Spawn score point
-			var po = instance_create_layer((tx * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-										  (gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oPoints);	
+			var po = instance_create_layer(
+				GridToWorld(tx, "x")	+ random_range(-5, 5),
+				GridToWorld(gridY, "y") + random_range(-5, 5),
+				"PointsLayer", oPoints);
 			po.pointValue = 1;
 				
 			// Create element burst particles
@@ -153,9 +156,10 @@ else if (dir == "up") {
 			audio_play_sound(soElementBreak, 0, 0);
 			
 			// Spawn score point
-			var po = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-										  (ty * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oPoints);	
+			var po = instance_create_layer(
+				GridToWorld(gridX, "x")	+ random_range(-5, 5),
+				GridToWorld(ty, "y") + random_range(-5, 5),
+				"PointsLayer", oPoints);
 			po.pointValue = 1;
 				
 			// Create element burst particles

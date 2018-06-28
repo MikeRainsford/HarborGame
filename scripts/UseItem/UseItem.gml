@@ -15,10 +15,9 @@ if (cast) {
 		var c = coords[0, i];
 		// check if item
 		if (IsItem(c[0], c[1])) {
-			var it = instance_create_layer(	(c[0] * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-											(c[1] * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-											"PointsLayer",
-											oItemObject);
+			var it = instance_create_layer(
+				GridToWorld(c[0], "x"), GridToWorld(c[1], "y"),
+				"PointsLayer", oItemObject);
 			it.type   = ds_grid_get(global.grid, c[0], c[1]) mod 10;
 			it.target = oCombatManager.turnControllerObject.currentPlayerTurn;
 			it.owner  = oCombatManager.turnControllerObject.currentPlayerTurn;
@@ -36,10 +35,9 @@ else {
 			var c = coords[0, i];
 			// check if item
 			if (IsItem(c[0], c[1])) {
-				var it = instance_create_layer(	(c[0] * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-												(c[1] * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-												"PointsLayer",
-												oItemObject);
+				var it = instance_create_layer(
+					GridToWorld(c[0], "x"), GridToWorld(c[1], "y"),
+					"PointsLayer", oItemObject);
 				it.type   = ds_grid_get(global.grid, c[0], c[1]) mod 10;
 				it.target = oCombatManager.turnControllerObject.currentPlayerTurn;
 				it.owner  = oCombatManager.turnControllerObject.currentPlayerTurn;

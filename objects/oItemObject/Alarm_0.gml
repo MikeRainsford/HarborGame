@@ -14,10 +14,10 @@ else {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Left
 	if (r == 0) {
-		var bot = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-										(gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-										"GameLayer",
-										oBottleRocket);
+		var bot = instance_create_layer(
+			GridToWorld(gridX, "x") + random_range(-5, 5),
+			GridToWorld(gridY, "y") + random_range(-5, 5),
+			"GameLayer", oBottleRocket);
 		bot.dir = "left";
 		bot.sprite_index = sBottleItemHorizontal;
 		bot.image_speed  = 0.5;
@@ -32,10 +32,10 @@ else {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Right
 	else if (r == 1) {
-		var bot = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-										(gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-										"GameLayer",
-										oBottleRocket);
+		var bot = instance_create_layer(
+			GridToWorld(gridX, "x") + random_range(-5, 5),
+			GridToWorld(gridY, "y") + random_range(-5, 5),
+			"GameLayer", oBottleRocket);
 		bot.dir = "right";
 		bot.sprite_index = sBottleItemHorizontal;
 		bot.image_speed  = 0.5;
@@ -50,10 +50,10 @@ else {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Up
 	else if (r == 2) {
-		var bot = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-										(gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-										"GameLayer",
-										oBottleRocket);
+		var bot = instance_create_layer(
+			GridToWorld(gridX, "x") + random_range(-5, 5),
+			GridToWorld(gridY, "y") + random_range(-5, 5),
+			"GameLayer", oBottleRocket);
 		bot.dir = "up";
 		bot.sprite_index = sBottleItemVertical;
 		bot.image_speed  = 0.5;
@@ -68,10 +68,10 @@ else {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Down 
 	else if (r == 3) {
-		var bot = instance_create_layer((gridX * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset,
-										(gridY * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset,
-										"GameLayer",
-										oBottleRocket);
+		var bot = instance_create_layer(
+			GridToWorld(gridX, "x") + random_range(-5, 5),
+			GridToWorld(gridY, "y") + random_range(-5, 5),
+			"GameLayer", oBottleRocket);
 		bot.dir = "down";
 		bot.sprite_index = sBottleItemVertical;
 		bot.image_speed  = 0.5;

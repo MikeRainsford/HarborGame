@@ -1,1 +1,0 @@
-//audio_play_sound(soCoinLand, 0, 0);

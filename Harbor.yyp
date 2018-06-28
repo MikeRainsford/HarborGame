@@ -2148,25 +2148,6 @@
             }
         },
         {
-            "Key": "63d41caf-e2d5-47c0-991d-adfad966ff1b",
-            "Value": {
-                "id": "09b77399-a5ef-4a6b-b2f1-b3fee4dc4924",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "objects\/oCoin\/oCoin.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "63fdf709-cf4f-46a6-96e2-abdcfed9fc57",
             "Value": {
                 "id": "98508c2c-0929-425e-8d9d-760a7b53b704",
@@ -6142,8 +6123,8 @@
         "9658d71d-84b6-4759-8763-fd5266da9a38",
         "63fdf709-cf4f-46a6-96e2-abdcfed9fc57",
         "4d2c3923-21f9-4d2e-9e4e-ea2eea4a9f99",
-        "79a77d28-b49b-4cc4-80e1-1a2d476aa882",
         "3f09282d-48e6-45cb-98ae-7cd3b15af24a",
+        "79a77d28-b49b-4cc4-80e1-1a2d476aa882",
         "e3a8e14b-f0b4-4803-9eb0-5b965b9de344",
         "2d7e8372-f231-49df-83d8-fbf75fad3f0f",
         "c5df1d3c-09c3-4d38-b551-23aefa854e3e"

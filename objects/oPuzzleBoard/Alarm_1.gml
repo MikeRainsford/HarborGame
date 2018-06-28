@@ -9,9 +9,10 @@ for (var i = 0; i < ds_grid_width(global.grid); i++) {
 			ds_grid_set(global.grid, i, j, 0);
 			
 			// Spawn score point
-			var p = instance_create_layer((i * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset + random_range(-5, 5),
-										  (j * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset + random_range(-5, 5),
-										  "PointsLayer", oPoints);	
+			var p = instance_create_layer(
+				GridToWorld(i, "x") + random_range(-5, 5),
+				GridToWorld(j, "y") + random_range(-5, 5),
+				"PointsLayer", oPoints);	
 			p.pointValue = 1;
 		}
 	}
