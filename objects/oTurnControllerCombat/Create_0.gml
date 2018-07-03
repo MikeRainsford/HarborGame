@@ -10,7 +10,7 @@ ds_list_add(teams, enemies);
 currentTeamPlayerIndex	= 0;
 currentTeamIndex		= 0;
 
-currentTeamTurn		= ds_list_find_value(teams, currentTeamIndex);
+currentTeamTurn		= friendlies;
 nextTeamTurn		= noone;
 previousTeamTurn	= noone;
 

@@ -32,8 +32,8 @@ global.pGrid = ds_grid_create(gridWidth, gridHeight);
 global.gridIndexX = 0;
 global.gridIndexY = 0;
 // Set grid to all random values
-for (var i = 0; i < oPuzzleBoard.gridWidth; i++){
-	for (var j = 0; j < oPuzzleBoard.gridHeight; j++){
+for (var i = 0; i < gridWidth; i++){
+	for (var j = 0; j < gridHeight; j++){
 		ds_grid_set(global.grid, i, j, RandomPiece());
 	}
 }
@@ -62,3 +62,5 @@ itemsToUse			= [];
 basicSpellSound		= noone;
 defaultScreenShake  = 4;
 defaultScreenFlash  = 0.8;
+
+inCombatMenu		= false;

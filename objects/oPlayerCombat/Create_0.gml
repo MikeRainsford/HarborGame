@@ -9,9 +9,9 @@ currentHealth	= object_get_parent(id).currentHealth;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Game Objects belonging to player
-spellBook = object_get_parent(id).spellBook;
-inventory = object_get_parent(id).inventory;
-skillTree = object_get_parent(id).skillTree;
+spellBook		= object_get_parent(id).spellBook;
+inventory		= object_get_parent(id).inventory;
+skillTree		= object_get_parent(id).skillTree;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Sprites
@@ -31,8 +31,9 @@ if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id)
 else
 	state = "waiting";
 	
-combatZone = oCombatManager.playerCombatZone;
+combatZone		= oCombatManager.playerCombatZone;
 playedHurtSound = false;
 effectApplied   = false;
-chainCount = 0;
-attackTarget = oEnemyCombat;
+chainCount		= 0;
+attackTarget	= oEnemyCombat;
+team			= "friendlies";

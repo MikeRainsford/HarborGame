@@ -3,7 +3,7 @@ if (oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Player turn
 	if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
-		DrawSpellBook();
-		DrawMoreInfo();
+		//DrawSpellBook();
+		//DrawMoreInfo();
 	}
 }

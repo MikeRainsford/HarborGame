@@ -2,14 +2,17 @@
 if (turnControllerObject.currentPlayerTurn.state == "idle") {
 	UpdateDataReference();
 	
-	// Friendly turn- - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Friendly turn
 	if (turnControllerObject.currentTeamTurn == turnControllerObject.friendlies) {
 		// Check for matching spell configurations
 		UpdateSpellBookIndex();
 		CheckSpellForms();
 		UpdateCursorPosition();
 	}
-	// Enemy turn- - - - -
+	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Enemy turn
 	else if (turnControllerObject.currentTeamTurn == turnControllerObject.enemies) {		
 		// Decide which AI script to use
 		if (!combatEnemyObject.searchedForSpell) {

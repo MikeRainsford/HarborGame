@@ -75,6 +75,7 @@ if (!oSpellBookUI.inSpellBook){
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Exit spell book by pressing A
 else {
+	/*
 	if (action1Pressed || upPressed) {
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		oSpellBookUI.inSpellBook = false;	
@@ -87,4 +88,5 @@ else {
 		global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;
 		global.gridIndexX = floor(oPuzzleBoard.gridWidth / 2) - 1;
 	}	
+	*/
 }
