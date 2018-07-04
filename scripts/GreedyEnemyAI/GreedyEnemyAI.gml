@@ -9,7 +9,7 @@ var strongestSpellFlip;
 var maxDam = 0;
 
 // check the grid for each spell in current enemies spell book
-for (var i = 0; i < array_length_1d(oCombatManager.combatEnemyObject.spellBook.data); i++) {
+for (var i = 0; i < array_length_1d(oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data); i++) {
 	// Update spell book index
 	oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index = i;
 	

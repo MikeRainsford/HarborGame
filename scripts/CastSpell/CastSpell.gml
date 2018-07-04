@@ -1,6 +1,6 @@
 var coords = argument0;
 
-// Set player to attacking
+// Set player to attacking				// DO NOT REMOVE .id
 oCombatManager.turnControllerObject.currentPlayerTurn.id.state = "chargingSpell";	
 
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
@@ -11,8 +11,8 @@ if (global.spellData[sp, spellC.SpellID] == 0)
 	oPuzzleBoard.basicSpellSound = ds_grid_get(global.grid, global.gridIndexX, global.gridIndexY);
 	
 // Reset cursor position
-oSpellBookUI.inSpellBook = true;
-oSpellBookUI.moreInfo = false;
+oCombatManager.combatMenu.inSpellBook = true;
+//oSpellBookUI.moreInfo = false;
 
 // Play spell selection
 audio_play_sound(soSelectSpell, 0, 0);

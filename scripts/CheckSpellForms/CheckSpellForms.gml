@@ -14,7 +14,7 @@ var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[i
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check Spells
-if (action1Pressed && !oSpellBookUI.inSpellBook){
+if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.combatMenu.attacking && !oPuzzleBoard.inCombatMenu){
 	switch(global.spellData[sp, spellC.SpellID]){
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// Single

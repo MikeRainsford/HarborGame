@@ -4,23 +4,29 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // ApplyEffect
 if (state == "applyEffect") {
-	state = "idle";
+	if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id) {
+		state = "idle";
+	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Idle
 else if (state == "idle") {
-	// Reset knockback
-	x = combatZone.x;
-	playedHurtSound = false;
+	if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id) {
+		// Reset knockback
+		x = startingX;
+		playedHurtSound = false;
+	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Charging Spell
 else if (state == "chargingSpell") {
-	// Move into attacking state
-	if (instance_exists(oSpellObject))
-		state = "attacking";
+	if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id) {
+		// Move into attacking state
+		if (instance_exists(oSpellObject) && oSpellObject.owner == id)
+			state = "attacking";
+	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -46,9 +52,11 @@ else if (state == "hurt") {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking
 else if (state == "attacking") {
-	// Transition out of attacking into using item
-	if (alarm[0] == -1)
-		alarm[0] = 30;
+	if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id) {
+		// Transition out of attacking into using item
+		if (alarm[0] == -1)
+			alarm[0] = 30;
+	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -67,7 +75,7 @@ else if (state == "waiting") {
 		state = "hurt";
 		
 	// Reset knockback
-	x = combatZone.x;
+	x = startingX;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

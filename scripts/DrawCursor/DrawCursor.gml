@@ -102,7 +102,7 @@ var flp = global.spellData[sp, spellC.FlipOrientation];
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // If cursor is visible, draw it with the above defined characteristics
-if (!oSpellBookUI.inSpellBook) {	
+if (!oCombatManager.combatMenu.inSpellBook && !oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking) {	
 	draw_sprite_ext(cursorSprite, 0,((global.gridIndexX + cursorWidth  - (1 * cursorWidth))  * oPuzzleBoard.gridPadding) + xo + rxoff,
 									((global.gridIndexY + cursorHeight - (1 * cursorHeight)) * oPuzzleBoard.gridPadding) + yo + ryoff,
 									flp, 1, rot, c_white, 1);

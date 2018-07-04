@@ -1,46 +1,43 @@
 // Currently in Menu
-if (inCombatMenu && !inActionMenu && !inSpellMenu && !inItemMenu) {
+if (oPuzzleBoard.inCombatMenu && !oCombatManager.combatMenu.attacking && !oCombatManager.combatMenu.inSpellBook) { // && !inActionMenu && !inSpellMenu && !inItemMenu) {
 	Input();
-	combatMenuOptions[combatMenuIndex] = true;
+	combatMenuArray[combatMenuIndex] = true;
 		
 	if (rightPressed || downPressed) {
-		if (combatMenuIndex < 1) {
-			combatMenuOptions[combatMenuIndex] = false;
+		audio_play_sound(soMenuMove, 0, 0);
+		if (combatMenuIndex < array_length_1d(oCombatMenu.combatMenuArray) - 1) {
+			combatMenuArray[combatMenuIndex] = false;
 			combatMenuIndex++;
-			combatMenuOptions[combatMenuIndex] = true;
+			combatMenuArray[combatMenuIndex] = true;
 		}
 		else {
-			combatMenuOptions[combatMenuIndex] = false;
+			combatMenuArray[combatMenuIndex] = false;
 			combatMenuIndex = 0;
-			combatMenuOptions[combatMenuIndex] = true;
+			combatMenuArray[combatMenuIndex] = true;
 		}
 	}
 	if (leftPressed || upPressed) {
+		audio_play_sound(soMenuMove, 0, 0);
 		if (combatMenuIndex > 0) {
-			combatMenuOptions[combatMenuIndex] = false;
+			combatMenuArray[combatMenuIndex] = false;
 			combatMenuIndex--;	
-			combatMenuOptions[combatMenuIndex] = true;
+			combatMenuArray[combatMenuIndex] = true;
 		}
 		else {
-			combatMenuOptions[combatMenuIndex] = false;
-			combatMenuIndex = 1;
-			combatMenuOptions[combatMenuIndex] = true;
+			combatMenuArray[combatMenuIndex] = false;
+			combatMenuIndex = array_length_1d(oCombatMenu.combatMenuArray) - 1;
+			combatMenuArray[combatMenuIndex] = true;
 		}
 	}
 	
-	// Enter into character menu, or escape
+	// Enter into attack menu
 	if (action1Pressed) {
 		if (combatMenuIndex == 0) {
-			inCombatMenu = false;
-			inActionMenu = true;
-			combatMenuOptions[combatMenuIndex] = true;
+			audio_play_sound(soCombatMenuSelect, 0, 0);
+			attacking	 = true;
+			inSpellBook	 = true;
+			combatMenuArray[combatMenuIndex] = true;
+			RotateBoard();
 		}
-		else if (combatMenuIndex == 1) {
-			//EscapeBattle();	
-		}
-	}
-	if (action2Pressed) {
-		inCombatMenu = false;
-		combatMenuOptions[combatMenuIndex] = false;
 	}
 }

@@ -23,6 +23,7 @@ if (cast) {
 			it.owner  = oCombatManager.turnControllerObject.currentPlayerTurn;
 			it.gridX  = c[0];
 			it.gridY  = c[1];;
+			show_message(it.target);
 		}
 	}
 }

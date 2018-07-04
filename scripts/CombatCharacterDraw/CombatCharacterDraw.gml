@@ -9,6 +9,7 @@ if (state == "applyEffect") {
 	sprite_index = idleSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -19,6 +20,7 @@ else if (state == "idle") {
 	sprite_index = idleSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -30,6 +32,7 @@ else if (state == "chargingSpell") {
 	sprite_index = idleSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -40,6 +43,7 @@ else if (state == "hurt") {
 	sprite_index = hurtSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -50,6 +54,7 @@ else if (state == "attacking") {
 	sprite_index = attackSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -60,6 +65,7 @@ else if (state == "usingItem") {
 	sprite_index = idleSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -79,6 +85,7 @@ else if (state == "waiting") {
 		image_xscale = facing;
 		image_yscale = 1;
 	}
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -89,6 +96,7 @@ else if (state == "endTurn") {
 	sprite_index = idleSprite;
 	image_xscale = facing;
 	image_yscale = 1;
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -97,6 +105,7 @@ else if (state == "dead") {
 	
 }
 
-draw_self();
-draw_sprite_ext(sHeart, 0, combatZone.x + 5, combatZone.y + 7, 1, 1, 0, c_white, 1);
-draw_text_transformed(combatZone.x - 6, combatZone.y + 4, currentHealth, 0.3, 0.3, 0);
+draw_sprite_ext(sHeart, 0, startingX, combatZone.y + 4, 1, 1, 0, c_white, 1);
+draw_text_transformed(startingX - 3, combatZone.y + 8, currentHealth, 0.3, 0.3, 0);
+
+draw_text_transformed(x, y - 10, state, 0.25, 0.25, 0);

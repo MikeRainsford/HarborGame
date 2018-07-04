@@ -5,12 +5,12 @@ var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[i
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Toggle more info box
-if (oSpellBookUI.inSpellBook && action3Pressed)
-	oSpellBookUI.moreInfo = !oSpellBookUI.moreInfo;
-else if (!oSpellBookUI.inSpellBook)
-	oSpellBookUI.moreInfo = false;
+//if (oCombatManager.combatMenu.inSpellBook && action3Pressed)
+	//oSpellBookUI.moreInfo = !oSpellBookUI.moreInfo;
+//else if (!oCombatManager.combatMenu.inSpellBook)
+	//oSpellBookUI.moreInfo = false;
 
-if (oSpellBookUI.moreInfo && oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
+if (/*oSpellBookUI.moreInfo && */oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Draw frame
 	image_speed = 0.2;

@@ -3,7 +3,7 @@ if (first == "board") {
 	DrawElements();
 }
 else if (first == "combatMenu") {
-	DrawCombatUI();
+	DrawCombatMenu();
 }
 
 var xx = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset - oPuzzleBoard.gridPadding;
@@ -27,7 +27,7 @@ boardSprite = sprite_create_from_surface(surface,
 				hh / 2);
 
 draw_clear_alpha(c_black, 0);
-DrawCombatUI();
+DrawCombatMenu();
 menuSprite = sprite_create_from_surface(
 				surface,
 				(room_width / 2) - (sprite_get_width(sCombatMenuUI) / 2),

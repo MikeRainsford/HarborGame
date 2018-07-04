@@ -15,7 +15,8 @@ else {
 	var cursorHeight = global.spellData[sp, spellC.CursorWidth];
 }
 
-if (!oSpellBookUI.inSpellBook){ 
+// Not in spell book, currently in grid
+if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oCombatManager.combatMenu.inSpellBook){ 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Right arrow in grid pressed
 	if (rightPressed){
@@ -30,7 +31,7 @@ if (!oSpellBookUI.inSpellBook){
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Left arrow in grid pressed
-	if (leftPressed){
+	else if (leftPressed){
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		if (global.gridIndexX > 0) {
 			global.gridIndexX--;	
@@ -42,7 +43,7 @@ if (!oSpellBookUI.inSpellBook){
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Up arrow in grid pressed
-	if (upPressed){
+	else if (upPressed){
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		if (global.gridIndexY > 0) {
 			global.gridIndexY--;	
@@ -54,7 +55,7 @@ if (!oSpellBookUI.inSpellBook){
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Down arrow in grid pressed
-	if (downPressed /*&& global.gridIndexY != oPuzzleBoard.gridHeight - cursorHeight*/){
+	else if (downPressed /*&& global.gridIndexY != oPuzzleBoard.gridHeight - cursorHeight*/){
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		if (global.gridIndexY < oPuzzleBoard.gridHeight - cursorHeight) {
 			global.gridIndexY++;	
@@ -67,18 +68,16 @@ if (!oSpellBookUI.inSpellBook){
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Enter spell book
 	if (action2Pressed) {
-		oSpellBookUI.inSpellBook = true;	
-		oSpellBookUI.moreInfo = false;
+		oCombatManager.combatMenu.inSpellBook = true;
 	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Exit spell book by pressing A
-else {
-	/*
+else if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oCombatManager.combatMenu.inSpellBook) {
 	if (action1Pressed || upPressed) {
 		audio_play_sound(soCursorSlideFree, 0, 0);
-		oSpellBookUI.inSpellBook = false;	
+		oCombatManager.combatMenu.inSpellBook = false;	
 			
 		if (global.spellData[sp, spellC.Orientation] == 0 || global.spellData[sp, spellC.Orientation] == 180)
 			var cursorHeight = global.spellData[sp, spellC.CursorHeight];
@@ -88,5 +87,9 @@ else {
 		global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;
 		global.gridIndexX = floor(oPuzzleBoard.gridWidth / 2) - 1;
 	}	
-	*/
+	else if (action2Pressed) {
+		oCombatManager.combatMenu.attacking = false;
+		oCombatManager.combatMenu.inSpellBook = false;
+		RotateBoard();
+	}
 }

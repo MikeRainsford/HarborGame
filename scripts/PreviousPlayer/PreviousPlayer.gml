@@ -30,8 +30,8 @@ oCombatManager.turnControllerObject.currentPlayerTurn = ds_list_find_value(oComb
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Reset Board State
-oSpellBookUI.inSpellBook = true;
-oSpellBookUI.moreInfo = false;
+oCombatManager.combatMenu.inSpellBook = true;
+//oSpellBookUI.moreInfo = false;
 
 UpdateTeamOrder();
 UpdateNextPlayerInLine();

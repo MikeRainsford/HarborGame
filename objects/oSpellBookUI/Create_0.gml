@@ -1,2 +1,0 @@
-inSpellBook = true;
-moreInfo	= false;

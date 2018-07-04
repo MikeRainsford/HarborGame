@@ -6,4 +6,5 @@ rotSpeed	 = 150;
 boardSprite	 = noone;
 menuSprite	 = noone;
 
-alarm[0] = 5;
+/// @description Rotation sound
+audio_play_sound(soBoardRotation, 0, 0);

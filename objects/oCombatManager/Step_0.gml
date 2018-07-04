@@ -7,15 +7,17 @@ if (turnControllerObject.currentPlayerTurn.state == "idle") {
 	if (turnControllerObject.currentTeamTurn == turnControllerObject.friendlies) {
 		// Check for matching spell configurations
 		UpdateSpellBookIndex();
-		CheckSpellForms();
+		CheckSpellForms(); // check spell forms needs to come before update cursor position
 		UpdateCursorPosition();
+		RotateSpell();
+		FlipSpell();
 	}
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Enemy turn
 	else if (turnControllerObject.currentTeamTurn == turnControllerObject.enemies) {		
 		// Decide which AI script to use
-		if (!combatEnemyObject.searchedForSpell) {
+		if (!turnControllerObject.currentPlayerTurn.searchedForSpell) {
 			GreedyEnemyAI();
 		}
 	}

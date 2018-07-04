@@ -25,12 +25,12 @@ draw_sprite_ext(spr, -1, room_width / 2 - 21, 63, flp, 1, rot, c_white, 1);
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw White Outline for Spell
 var sprStill = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) + "SpellFrame");
-if (oSpellBookUI.inSpellBook)
+if (oCombatManager.combatMenu.inSpellBook)
 	draw_sprite_ext(sprStill, 0, room_width / 2 - 21, 63, flp, 1, rot, c_white, 1);
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Update color if player is in spellBook
-if (oSpellBookUI.inSpellBook)
+if (oCombatManager.combatMenu.inSpellBook)
 	var c = c_white;
 else
 	var c = make_color_rgb(29, 43, 83);
@@ -51,7 +51,7 @@ if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnCo
 	if (global.spellData[sp, spellC.CanRotate]) {
 		var framex = room_width / 2 - 20;
 		var framey = 63;
-		if (oSpellBookUI.inSpellBook) {
+		if (oCombatManager.combatMenu.inSpellBook) {
 			if (rotateLeftHold || rotateRightHold) {
 				draw_sprite_ext(sRotate, 7, framex - 11, framey - 6, .5, .5, 0, c_white, 1);	
 			}
@@ -71,7 +71,7 @@ if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnCo
 	if (global.spellData[sp, spellC.CanFlip]) {
 		var framex = room_width / 2 - 20;
 		var framey = 63;
-		if (oSpellBookUI.inSpellBook) {
+		if (oCombatManager.combatMenu.inSpellBook) {
 			if (flipHold) {
 				draw_sprite_ext(sFlip, 7, framex - 14, framey, .5, .5, 0, c_white, 1);	
 			}
@@ -89,7 +89,7 @@ if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnCo
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw Spell Book Arrows
-if(oSpellBookUI.inSpellBook) {
+if(oCombatManager.combatMenu.inSpellBook) {
 	// Press Right
 	if (right && oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 		if (rightPressed)
@@ -110,7 +110,7 @@ if(oSpellBookUI.inSpellBook) {
 		draw_sprite_ext(sRightArrow, 0, room_width / 2 + 39, 64, 1, 1, 0, c_white, 1);	
 	}
 }
-else if (!oSpellBookUI.inSpellBook) {
+else if (!oCombatManager.combatMenu.inSpellBook) {
 	draw_sprite_ext(sLeftArrow,  0, room_width / 2 - 41, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);
 	draw_sprite_ext(sRightArrow, 0, room_width / 2 + 39, 64, 1, 1, 0, make_color_rgb(29, 43, 83), 1);	
 }	

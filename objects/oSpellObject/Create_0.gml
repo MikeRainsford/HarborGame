@@ -42,3 +42,5 @@ if (global.spellData[sp, spellC.HasChargeSound]) {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set Sound Delay to sync spell sound with animation
 alarm[0] = global.spellData[sp, spellC.SoundDelay];
+
+owner	 = noone;

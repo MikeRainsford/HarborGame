@@ -4,8 +4,8 @@ event_inherited();
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Player variables
-maxHealth		= object_get_parent(id).maxHealth;
-currentHealth	= object_get_parent(id).currentHealth;
+maxHealth			= object_get_parent(id).maxHealth;
+currentHealth		= object_get_parent(id).currentHealth;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Game Objects belonging to player
@@ -15,9 +15,9 @@ skillTree		= object_get_parent(id).skillTree;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Sprites
-idleSprite		= sWitchIdle;
-hurtSprite		= sWitchHurt;
-attackSprite	= sWitchCast;
+idleSprite		= noone;
+hurtSprite		= noone;
+attackSprite	= noone;
 
 if (x > room_width / 2)
 	facing = -1;
@@ -27,13 +27,15 @@ else
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Other
 if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id)
-	state = "idle";
+	state	= "idle";
 else
-	state = "waiting";
+	state	= "waiting";
 	
-combatZone		= oCombatManager.playerCombatZone;
-playedHurtSound = false;
-effectApplied   = false;
-chainCount		= 0;
-attackTarget	= oEnemyCombat;
-team			= "friendlies";
+combatZone			= oCombatManager.playerCombatZone;
+playedHurtSound		= false;
+effectApplied		= false;
+chainCount			= 0;
+attackTarget		= oEnemyCombat;
+startingX			= noone;
+startingY			= noone; 
+attackedThisTurn	= false;

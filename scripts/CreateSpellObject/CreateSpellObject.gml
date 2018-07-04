@@ -20,18 +20,22 @@ switch(global.spellData[sp, spellC.SpellID]) {
 		if (oPuzzleBoard.basicSpellSound == 1) { // basic fire
 			var i = instance_create_layer(caster.x, caster.y - 6, "GameLayer", oSpellObject);
 			i.damageToDeal = d;
+			i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 		}
 		else if (oPuzzleBoard.basicSpellSound == 2) { // basic water
 			var i = instance_create_layer(target.x, target.y, "GameLayer", oSpellObject);
 			i.damageToDeal = d;
+			i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 		}
 		else if (oPuzzleBoard.basicSpellSound == 3) { // basic leaf
 			var i = instance_create_layer(target.x, target.y, "GameLayer", oSpellObject);
 			i.damageToDeal = d;
+			i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 		}
 		else if (oPuzzleBoard.basicSpellSound == 4) { // basic bolt
 			var i = instance_create_layer(caster.x, caster.y - 6, "GameLayer", oSpellObject);
 			i.damageToDeal = d;
+			i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 		}
 		break;
 		
@@ -39,25 +43,31 @@ switch(global.spellData[sp, spellC.SpellID]) {
 	case 1: // fireball
 		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 2: // elemental
 		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 3: // bolt
 		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 4: // sprout
 		var i = instance_create_layer(caster.x, caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 5: // flood
 		var i = instance_create_layer(64, room_height, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 6: // brushfire
 		var i = instance_create_layer(caster.x + (4 * side), caster.y - 6, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
+		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 }

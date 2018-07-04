@@ -43,6 +43,9 @@ chainCount			= 0;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Other
-combatZone = oCombatManager.enemyCombatZone;
-playedHurtSound = false;
-attackTarget = oPlayerCombat;
+combatZone			= oCombatManager.enemyCombatZone;
+playedHurtSound		= false;
+attackTarget		= oPlayerCombat;
+startingX			= noone;
+startingY			= noone; 
+attackedThisTurn	= false;

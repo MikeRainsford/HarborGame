@@ -1,23 +1,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Menu Navigation
-showCombatMenu			= true;
+// Combat Menu Navigation
+attack				= false;
+item				= false;
+spells				= false;
+skills				= false;
+combatMenuIndex		= 0;	
+combatMenuArray		= [attack, item, spells, skills];
 
-inCombatMenu			= true;
-combatMenuOptions		= [false, false]; // 0:player1, 1:escape
-combatMenuIndex			= 0;
-
-inActionMenu			= false;
-actionMenuOptions		= [false, false]; // 0:attack, 1:items
-actionMenuIndex			= 0;
-
-inSpellMenu				= false;
-inItemMenu				= false;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Menu Floating
-startX					= oCombatManager.turnControllerObject.currentPlayerTurn.x + 4;
-startY					= oCombatManager.turnControllerObject.currentPlayerTurn.y - 7;
-currentY				= startY;
-maxY					= startY - 1;
-minY					= startY + 1;
-dir						= "up";
+inSpellBook			= false;
+attacking			= false;
+usingItem			= false;

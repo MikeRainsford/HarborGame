@@ -49,7 +49,7 @@ else {
 		global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;
 
 		// Exit spell book
-		oSpellBookUI.inSpellBook = false;
+		oCombatManager.combatMenu.inSpellBook = false;
 
 		// Start moving to spell book
 		if (alarm[2] == -1)

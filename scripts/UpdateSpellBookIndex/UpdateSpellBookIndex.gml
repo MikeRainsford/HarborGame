@@ -1,5 +1,5 @@
 Input();
-if (oCombatManager.spellBookUI.inSpellBook) {
+if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oCombatManager.combatMenu.inSpellBook) {
 	if (rightPressed) {
 		if (oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index < array_length_1d(oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data) - 1)
 			oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index++;

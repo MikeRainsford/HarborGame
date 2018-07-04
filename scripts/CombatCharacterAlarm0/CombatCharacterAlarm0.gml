@@ -4,19 +4,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Hurt
 if (state == "hurt") {
-	if (oCombatManager.turnControllerObject.currentPlayerTurn.id == id)
-		state = "idle";
-	else
-		state = "waiting";
+	state = "idle";
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking
 else if (state == "attacking") {
-	if (instance_exists(oSpellObject))
-		alarm[0] = 1;
-	else
-		state = "usingItem";
+	if (oCombatManager.turnControllerObject.currentPlayerTurn == id) {
+		if (instance_exists(oSpellObject) && oSpellObject.owner == id)
+			alarm[0] = 1;
+		else
+			state = "usingItem";
+	}
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
