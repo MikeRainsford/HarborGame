@@ -3,7 +3,7 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Apply Effect
-if (state == "applyEffect") {
+if (id.state == "applyEffect") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
@@ -14,7 +14,7 @@ if (state == "applyEffect") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Idle
-else if (state == "idle") {
+if (id.state == "idle") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
@@ -25,7 +25,7 @@ else if (state == "idle") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Charging Spell
-else if (state == "chargingSpell") {
+if (id.state == "chargingSpell") {
 	// Change to charging animation!!!!
 	image_speed  = 0.4;
 	image_index  = id.image_index;
@@ -37,7 +37,7 @@ else if (state == "chargingSpell") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Hurt
-else if (state == "hurt") {
+if (id.state == "hurt") {
 	image_speed	 = 0.7;
 	image_index  = id.image_index;
 	sprite_index = hurtSprite;
@@ -48,7 +48,7 @@ else if (state == "hurt") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking
-else if (state == "attacking") {
+if (id.state == "attacking") {
 	image_speed  = 0.0;
 	image_index  = id.image_index;
 	sprite_index = attackSprite;
@@ -59,7 +59,7 @@ else if (state == "attacking") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Using Item
-else if (state == "usingItem") {
+if (id.state == "usingItem") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
@@ -70,7 +70,7 @@ else if (state == "usingItem") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Waiting
-else if (state == "waiting") {
+if (id.state == "waiting") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
@@ -78,19 +78,20 @@ else if (state == "waiting") {
 	image_yscale = 1;
 	
 	// Draw attacking animation until spell object is gone
-	if (instance_exists(oSpellObject) && oSpellObject.image_xscale == id.image_xscale) {
-		image_speed  = 0.0;
-		image_index  = id.image_index;
-		sprite_index = attackSprite;
-		image_xscale = facing;
-		image_yscale = 1;
+	if (instance_exists(oSpellObject) && oSpellObject.image_xscale == id.image_xscale && 
+		oCombatManager.turnControllerObject.currentPlayerTurn == id) {
+			image_speed  = 0.0;
+			image_index  = id.image_index;
+			sprite_index = attackSprite;
+			image_xscale = facing;
+			image_yscale = 1;
 	}
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // End Turn
-else if (state == "endTurn") {
+if (id.state == "endTurn") {
 	image_speed  = 0.4;
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
@@ -99,13 +100,5 @@ else if (state == "endTurn") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Dead
-else if (state == "dead") {
-	
-}
-
 draw_sprite_ext(sHeart, 0, startingX, combatZone.y + 4, 1, 1, 0, c_white, 1);
 draw_text_transformed(startingX - 3, combatZone.y + 8, currentHealth, 0.3, 0.3, 0);
-
-draw_text_transformed(x, y - 10, state, 0.25, 0.25, 0);

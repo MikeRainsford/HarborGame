@@ -10,7 +10,7 @@ var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[i
 //else if (!oCombatManager.combatMenu.inSpellBook)
 	//oSpellBookUI.moreInfo = false;
 
-if (/*oSpellBookUI.moreInfo && */oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle") {
+if (/*oSpellBookUI.moreInfo && */oCombatManager.turnControllerObject.currentPlayerTurn.id.state == "idle") {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Draw frame
 	image_speed = 0.2;

@@ -4,5 +4,5 @@ if ((oCombatManager.turnControllerObject.currentTeamPlayerIndex + 1) < ds_list_s
 	oCombatManager.turnControllerObject.nextPlayerTurn = ds_list_find_value(oCombatManager.turnControllerObject.currentTeamTurn, oCombatManager.turnControllerObject.currentTeamPlayerIndex + 1);
 }
 else {
-	oCombatManager.turnControllerObject.nextPlayerTurn = ds_list_find_value(oCombatManager.turnControllerObject.nextTeamTurn, 0);
+	oCombatManager.turnControllerObject.nextPlayerTurn = ds_list_find_value(oCombatManager.turnControllerObject.currentTeamTurn, 0);
 }

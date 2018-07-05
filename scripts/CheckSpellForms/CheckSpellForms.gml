@@ -409,5 +409,5 @@ if (cast)
 	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Use item
-if (item)
-	UseItem(items, coords, cast); // pass items array, coordinates array, and check if we cast a spell
+//if (item)
+//	UseItem(items, coords, cast); // pass items array, coordinates array, and check if we cast a spell

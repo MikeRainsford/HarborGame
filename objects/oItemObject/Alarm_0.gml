@@ -2,7 +2,7 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Wait for attacking to finish
-if (oCombatManager.turnControllerObject.currentPlayerTurn.state != "usingItem") {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != "usingItem") {
 	alarm[0] = 1;	
 }
 

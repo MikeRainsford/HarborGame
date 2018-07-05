@@ -153,6 +153,25 @@
             }
         },
         {
+            "Key": "04e2a9fd-f01e-42ed-bc22-b589fc8de2a4",
+            "Value": {
+                "id": "49495d73-1f7c-4cbc-919b-717edab976d1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/NextTeam\/NextTeam.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "059c9ebe-9598-4e08-93c9-f63eb9e34ac5",
             "Value": {
                 "id": "1d58a230-8eb3-42a7-86b4-954556b5ada5",
@@ -6428,6 +6447,7 @@
         "a47c54d9-8a84-4ff1-ae47-3a9559a34932",
         "cf003d6e-8fba-49cd-abd9-fde509c6a615",
         "9658d71d-84b6-4759-8763-fd5266da9a38",
+        "04e2a9fd-f01e-42ed-bc22-b589fc8de2a4",
         "63fdf709-cf4f-46a6-96e2-abdcfed9fc57",
         "4d2c3923-21f9-4d2e-9e4e-ea2eea4a9f99",
         "3f09282d-48e6-45cb-98ae-7cd3b15af24a",

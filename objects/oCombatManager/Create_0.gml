@@ -24,7 +24,6 @@ combatPlayerObject2.idleSprite		= sExecutionerIdle;
 combatPlayerObject2.hurtSprite		= sExecutionerHurt;
 combatPlayerObject2.attackSprite	= sExecutionerCast;
 ds_list_add(turnControllerObject.friendlies, combatPlayerObject2);
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Enemy Team
 enemyCombatZone			= instance_create_layer(room_width - 32,			room_height - 16,	"GameLayer",		oCombatZone);

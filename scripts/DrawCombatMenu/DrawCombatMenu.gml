@@ -10,8 +10,9 @@ var scy = (sprite_get_height(sCombatMenuUI) / 2) + (oPuzzleBoard.gridPadding * 1
 draw_sprite_ext(sCombatMenuUI, 0, scx, scy, 1, 1, 0, c_white, 1);
 
 // Draw character
-var sp = sWitchIdle;
-draw_sprite_ext(sp, oPlayerCombat.image_index,
+var sp =  oCombatManager.turnControllerObject.currentPlayerTurn.sprite_index;
+var spi = oCombatManager.turnControllerObject.currentPlayerTurn.image_index;
+draw_sprite_ext(sp, spi,
 				scx - (sprite_get_width(sCombatMenuUI) / 4),
 				scy +  sprite_get_height(sp),
 				2, 2, 0, c_white, 1);

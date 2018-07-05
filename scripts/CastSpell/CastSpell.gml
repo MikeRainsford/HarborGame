@@ -27,6 +27,9 @@ for (var i = 0; i < array_length_2d(coords, 0); i++) {
 // Start TurnParent alarm chain
 if (oPuzzleBoard.alarm[0] == -1)
 	oPuzzleBoard.alarm[0] = oPuzzleBoard.whitePieceLength;
+	
+// Set current character has attacked this turn
+oCombatManager.turnControllerObject.currentPlayerTurn.id.attackedThisTurn = true;
 			
 // -----All Done In Alarm Event-----
 // Deal Damage

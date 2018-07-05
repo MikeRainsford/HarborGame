@@ -61,5 +61,5 @@ else {
 	}
 }
 
-if (oCombatManager.turnControllerObject.currentPlayerTurn.state == "idle")
-	oCombatManager.turnControllerObject.currentPlayerTurn.state = "usingItem";
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state == "idle")
+	oCombatManager.turnControllerObject.currentPlayerTurn.id.state = "usingItem";
