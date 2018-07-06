@@ -1,0 +1,32 @@
+Frost lord spells:
+
+All spells are carried over into the next phase
+
+
+Phase 1 100-75%
+Frost blast - Deals a moderate ammount of frost damage to 1 target.
+Icy Tomb - Traps 1 party member in a tomb (any non-frost damage breaks the tomb)
+Creeping Permafrost - a chill falls over the room, at 100% all party members die.  (Casting fire spells reduces this)
+
+Phase 2 75-50%  
+Blizzard - Causes all party members to take minor frost damage at the end of each turn
+
+
+Phase 3 50%-0
+Shatter (cast at transition) Breaks all Icy tombs killing party members that are trapped.
+Spawn Icicle* 
+
+
+*Icicle:
+When destroyed normally, or after 4 turns, falls on random party member dealing heavy damage.
+Can be damaged by any non-frost spell.
+Grows in size every turn (Increasing fall damage by 50%)
+When damaged by a fire spell will instantly melt (killing the icicle and preventing it from falling) Causes Waterlogged*
+
+
+*Waterlogged
+All party members are covered in water and will automatically be effected by Icy Tomb after 3 turns.
+Any fire damage removes Waterlogged.
+
+
+Good luck :)
