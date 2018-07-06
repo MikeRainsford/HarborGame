@@ -1,5 +1,6 @@
 /// @description Create spell object that will interact with enemy characters
 //  Spell object will contain info about the amount of damage to deal and will be dealt upon collision
+/// @param DamageToDeal
 
 var d = argument0;
 

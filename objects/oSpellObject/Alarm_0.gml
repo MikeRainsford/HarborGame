@@ -1,5 +1,4 @@
 /// @description Spell sound
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Basic spell only
 if (global.spellData[sp, spellC.SpellName] == "Basic") {

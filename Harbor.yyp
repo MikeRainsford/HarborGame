@@ -3193,25 +3193,6 @@
             }
         },
         {
-            "Key": "85546a43-8560-4a4a-b83f-7bf00acc8afc",
-            "Value": {
-                "id": "581eb6e1-a7a8-49cc-9240-59b3add40068",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "objects\/oPlayerOverworld\/oPlayerOverworld.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "8577d2d3-a446-44ac-92d3-7652125adb1b",
             "Value": {
                 "id": "38342817-9b75-415a-be73-0d301dd6a145",
@@ -4007,6 +3988,25 @@
                 ],
                 "resourcePath": "sprites\/sDemonHurt\/sDemonHurt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a159e724-c58a-4d0f-9cd7-f96a53817cdd",
+            "Value": {
+                "id": "ef21c2c4-1a79-44d6-92c4-95a6e54cb762",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/soCombatMenuReject\/soCombatMenuReject.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5568,25 +5568,6 @@
             }
         },
         {
-            "Key": "e3f7462d-bf16-40a8-9966-0b6b7efa51ef",
-            "Value": {
-                "id": "3214b28b-ed05-47d3-8a1e-8fb469f2e07c",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\/DrawMoreInfo\/DrawMoreInfo.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "e408c8dc-2874-4ccc-821e-d707780194f5",
             "Value": {
                 "id": "b0d95b90-da39-432c-a9ef-3ee0ad9f579d",
@@ -6412,7 +6393,6 @@
         "826c1dcb-6c73-4af4-bc35-51355a12c20d",
         "7264c3cd-8451-43ee-bbd2-b8fac3d1eef5",
         "f3cd967a-870b-44e8-a4a5-dfaaefee00b7",
-        "e3f7462d-bf16-40a8-9966-0b6b7efa51ef",
         "a476821f-f3f2-47f2-a6d1-8d8fd8da1eac",
         "9396cee8-4006-47ad-948b-389935c6d658",
         "23c1a281-082d-49d2-8f46-e79b8e5e9072",

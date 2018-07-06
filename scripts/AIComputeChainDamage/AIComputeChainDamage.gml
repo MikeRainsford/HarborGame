@@ -1,3 +1,6 @@
+/// @param cursorXIndex
+/// @param cursorYIndex
+
 var totalDamage = 0;
 var j = argument0;
 var k = argument1;

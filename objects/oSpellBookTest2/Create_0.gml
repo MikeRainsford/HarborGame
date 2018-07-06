@@ -3,7 +3,7 @@ event_inherited();
 capacity = 6;
 index	 = 0;
 
-data = [
+data	 = [
 	spell.Basic,
 	spell.Fireball,
 	spell.Elemental,
@@ -11,5 +11,4 @@ data = [
 	spell.Tsunami,
 	spell.Sprout,
 	spell.Brushfire,
-	//spell.Thunderstorm,
 ];

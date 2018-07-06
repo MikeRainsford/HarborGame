@@ -1,3 +1,5 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Draw Stuff to fill in space as we create surface
 if (first == "board") {
 	DrawBorder();
 	DrawElements();
@@ -6,6 +8,8 @@ else if (first == "combatMenu") {
 	DrawCombatMenu();
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Create surface sprites
 var xx = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset - oPuzzleBoard.gridPadding;
 var yy = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset - oPuzzleBoard.gridPadding;
 var ww = oPuzzleBoard.gridWidth			* oPuzzleBoard.gridPadding + oPuzzleBoard.gridPadding;

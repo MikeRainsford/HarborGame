@@ -1,3 +1,7 @@
+/// @param itemsArray
+/// @param coordsArray
+/// @param castBoolean
+
 var items  = argument0;
 var coords = argument1;
 var cast   = argument2;

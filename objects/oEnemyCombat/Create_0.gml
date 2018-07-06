@@ -1,7 +1,5 @@
 event_inherited();
-
 // @Override
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Player variables
 maxHealth		= object_get_parent(id).maxHealth;
@@ -15,9 +13,9 @@ skillTree = object_get_parent(id).skillTree;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Sprites
-idleSprite		= sFrogIdle;
-hurtSprite		= sFrogHurt;
-attackSprite	= sFrogCast;
+idleSprite		= noone;
+hurtSprite		= noone;
+attackSprite	= noone;
 
 if (x > room_width / 2)
 	facing = -1;

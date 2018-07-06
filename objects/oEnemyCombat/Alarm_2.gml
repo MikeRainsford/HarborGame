@@ -1,5 +1,4 @@
 /// @description Moving to Spell
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check if position is correct
 if (global.gridIndexX != spellCursorX || global.gridIndexY != spellCursorY) {

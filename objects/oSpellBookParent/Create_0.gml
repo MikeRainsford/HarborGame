@@ -1,6 +1,3 @@
 capacity = noone;
 index	 = noone;
-
-data = [
-
-];
+data	 = [];

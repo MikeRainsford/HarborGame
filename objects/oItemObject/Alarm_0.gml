@@ -1,5 +1,4 @@
 /// @description Bottle Rocket Item
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Wait for attacking to finish
 if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != "usingItem") {

@@ -1,7 +1,5 @@
 event_inherited();
-
 // @Override
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Player variables
 maxHealth			= object_get_parent(id).maxHealth;

@@ -1,5 +1,4 @@
 /// @description Rot, Flip, & Exit Spell Book
-
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 

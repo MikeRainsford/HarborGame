@@ -1,3 +1,4 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Check if current elements under the cursor match a spell configuration
 
 var coords  = [[]]; // xy grid positions of pieces to delete
@@ -11,8 +12,10 @@ var c;
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check Spells
 switch(global.spellData[sp, spellC.SpellID]){
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Single
 	case 0: 
 		coords = [
@@ -29,6 +32,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 			
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Fireball
 	case 1: 
 		// Make sure we dont check out of bounds
@@ -59,7 +63,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 			
-	// elemental
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Elemental
 	case 2: 
 		// Make sure we dont check out of bounds
 		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
@@ -93,7 +98,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 			
-	// lightningBolt
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// LightningBolt
 	case 3: 
 		// Make sure we dont check out of bounds
 		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
@@ -327,8 +333,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
-			
-	// sprout
+		
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Sprout
 	case 4:
 		// Make sure we dont check out of bounds
 		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
@@ -359,7 +366,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 		
-	// tsunami
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Tsunami
 	case 5:
 		// Make sure we dont check out of bounds
 		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
@@ -421,7 +429,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 		
-	// brushfire
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Brushfire
 	case 6:
 		// Make sure we dont check out of bounds
 		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY < oPuzzleBoard.gridHeight) {
@@ -482,7 +491,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 		}
 	break;
 		
-	// thunderstorm
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Thunderstorm
 	case 7:
 		// Make sure we dont check out of bounds
 		if (cursorX < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
@@ -511,7 +521,7 @@ switch(global.spellData[sp, spellC.SpellID]){
 	break;
 }
 	
-//-----------------------------------------
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 if (cast) {
 	return (global.spellData[sp, spellC.SpellID]);	
 }

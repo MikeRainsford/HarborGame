@@ -1,7 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw player sprites
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Apply Effect
 if (id.state == "applyEffect") {
 	image_speed  = 0.4;
@@ -12,7 +10,6 @@ if (id.state == "applyEffect") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Idle
 if (id.state == "idle") {
 	image_speed  = 0.4;
@@ -23,7 +20,6 @@ if (id.state == "idle") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Charging Spell
 if (id.state == "chargingSpell") {
 	// Change to charging animation!!!!
@@ -35,7 +31,6 @@ if (id.state == "chargingSpell") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Hurt
 if (id.state == "hurt") {
 	image_speed	 = 0.7;
@@ -46,7 +41,6 @@ if (id.state == "hurt") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking
 if (id.state == "attacking") {
 	image_speed  = 0.0;
@@ -56,8 +50,7 @@ if (id.state == "attacking") {
 	image_yscale = 1;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 
 // Using Item
 if (id.state == "usingItem") {
 	image_speed  = 0.4;
@@ -68,7 +61,6 @@ if (id.state == "usingItem") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Waiting
 if (id.state == "waiting") {
 	image_speed  = 0.4;
@@ -89,7 +81,6 @@ if (id.state == "waiting") {
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // End Turn
 if (id.state == "endTurn") {
 	image_speed  = 0.4;

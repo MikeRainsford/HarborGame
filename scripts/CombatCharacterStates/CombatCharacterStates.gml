@@ -1,7 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Character Combat states
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Idle
 if (state == "idle") {
 	// Reset knockback
@@ -9,7 +7,6 @@ if (state == "idle") {
 	playedHurtSound = false;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Charging Spell
 if (state == "chargingSpell") {
 	// Move into attacking state
@@ -17,7 +14,6 @@ if (state == "chargingSpell") {
 		state = "attacking";
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Hurt
 if (state == "hurt") {
 	if (alarm[0] == -1) {
@@ -37,7 +33,6 @@ if (state == "hurt") {
 	}
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking
 if (state == "attacking") {
 	// Transition out of attacking into using item
@@ -45,13 +40,12 @@ if (state == "attacking") {
 		alarm[0] = 30;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Using Item
 if (state == "usingItem") {
+	// Automatically transition to next player
 	NextPlayer();
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Waiting
 if (state == "waiting") {
 	// Set getting hurt
@@ -61,11 +55,11 @@ if (state == "waiting") {
 	// Reset knockback
 	x = startingX;
 	
+	// Reset hurt sound
 	if (!instance_exists(oSpellObject))
 		playedHurtSound = false;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // End Turn
 if (state == "endTurn") {
 	playedHurtSound = false;

@@ -1,3 +1,7 @@
+/// @param spellToCast
+/// @param cursorX
+/// @param cursorY
+
 var stc = argument0;
 var sxx = argument1;
 var syy = argument2;

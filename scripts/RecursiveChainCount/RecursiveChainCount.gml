@@ -1,7 +1,7 @@
 /// @description Recursively Counts The Damage Current Spell Will Do With Chaining
 /// @function RecursiveChainCount
-/// @param x
-/// @param y
+/// @param xIndex
+/// @param yIndex
 /// @param chainGrid
 
 var xx	= argument0; // x position of current index

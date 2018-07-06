@@ -75,6 +75,7 @@ if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oComba
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Exit spell book by pressing A
 else if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oCombatManager.combatMenu.inSpellBook) {
+	// Exit out of spellbook into puzzle grid
 	if (action1Pressed || upPressed) {
 		audio_play_sound(soCursorSlideFree, 0, 0);
 		oCombatManager.combatMenu.inSpellBook = false;	
@@ -87,6 +88,7 @@ else if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oC
 		global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;
 		global.gridIndexX = floor(oPuzzleBoard.gridWidth / 2) - 1;
 	}	
+	// Exit out of spell book back into combat menu
 	else if (action2Pressed) {
 		oCombatManager.combatMenu.attacking = false;
 		oCombatManager.combatMenu.inSpellBook = false;

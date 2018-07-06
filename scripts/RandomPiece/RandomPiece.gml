@@ -1,3 +1,6 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Return a random piece into the grid. this is going to be all of the puzzle data
+
 randomize();
 var r  = irandom_range(0, 1000); // percentage calculator
 var r2 = irandom_range(1, 4);   // normal elements

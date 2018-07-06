@@ -1,6 +1,6 @@
 /// @description Uses a priority grid/graph to recursively check for connecting chain pieces.
-//  @param Current wave iteration
-//  @param Current piece to check for chaining
+//  @param WaveIteration
+//  @param PieceToChain
 
 var w = argument0;
 var c = argument1; // piece to chain

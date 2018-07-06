@@ -1,6 +1,5 @@
 /// @description Create the puzzle pieces and update grid position
 // Individual pieces are responsible for their own logic and drawing
-
 var g = global.grid;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

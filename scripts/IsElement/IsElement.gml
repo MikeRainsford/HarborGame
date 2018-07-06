@@ -6,9 +6,9 @@
 var i = argument0;
 var j = argument1;
 
-var check = ds_grid_get(global.grid, i, j) mod 10;
+var piece = ds_grid_get(global.grid, i, j) mod 10;
 
-if (check < 5)
+if (piece < 5 && piece != 0)
 	return true;
 else
 	return false;

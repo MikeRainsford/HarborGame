@@ -1,4 +1,6 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Count how many instances of an element exist in the grid
+/// @param PieceToCount
 
 var t = argument0;
 var count = 0;

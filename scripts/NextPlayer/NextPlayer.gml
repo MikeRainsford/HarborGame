@@ -8,9 +8,11 @@ for (var i = 0; i < teamSize; i++) {
 		hasAttacked++;
 }
 
+// If everyone has attacked, move onto the next team
 if (hasAttacked == teamSize) {
 	NextTeam();	
 }
+// If not everyone has attacked, allow current player to attack
 else {
 	UpdateTeamOrder();
 	UpdateNextPlayerInLine();
